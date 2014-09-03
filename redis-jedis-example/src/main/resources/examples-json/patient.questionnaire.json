@@ -1,0 +1,932 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: Patient</p><p><b>title</b>: Information about a person or animal receiving health care services</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "contained": [
+        {
+            "resourceType": "ValueSet",
+            "id": "vs1",
+            "name": "Type options for Patient.deceased[x]",
+            "description": "Type options for Patient.deceased[x]",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:2e082d9a-778a-4cc0-a57c-ecd8a1629f15",
+                "concept": [
+                    {
+                        "code": "boolean",
+                        "display": "boolean"
+                    },
+                    {
+                        "code": "dateTime",
+                        "display": "dateTime"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "ValueSet",
+            "id": "vs2",
+            "name": "Type options for Patient.multipleBirth[x]",
+            "description": "Type options for Patient.multipleBirth[x]",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:03ff9cc4-8032-487c-86b0-9e16619cae63",
+                "concept": [
+                    {
+                        "code": "boolean",
+                        "display": "boolean"
+                    },
+                    {
+                        "code": "integer",
+                        "display": "integer"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "ValueSet",
+            "id": "vs3",
+            "name": "Type options for Patient.careProvider",
+            "description": "Type options for Patient.careProvider",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:aa6797cd-8574-479f-8f10-64e3023f2866",
+                "concept": [
+                    {
+                        "code": "Organization",
+                        "display": "Organization"
+                    },
+                    {
+                        "code": "Practitioner",
+                        "display": "Practitioner"
+                    }
+                ]
+            }
+        }
+    ],
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "Demographics and other administrative information about a person or animal receiving care or other health-related services."
+            }
+        ],
+        "linkId": "Patient",
+        "title": "Information about a person or animal receiving health care services",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "An identifier that applies to this person as a patient. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Identifier"
+                    }
+                ],
+                "linkId": "Patient.identifier",
+                "text": "An identifier for the person as this patient",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Patient.identifier.label",
+                        "text": "label:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Patient.identifier.system",
+                        "text": "system:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Patient.identifier.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A name associated with the individual."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Name"
+                    }
+                ],
+                "linkId": "Patient.name",
+                "text": "A name associated with the patient",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Patient.name.text",
+                        "text": "text:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Patient.name.family",
+                        "text": "family:",
+                        "type": "string",
+                        "repeats": true
+                    },
+                    {
+                        "linkId": "Patient.name.given",
+                        "text": "given:",
+                        "type": "string",
+                        "repeats": true
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A contact detail (e.g. a telephone number or an email address) by which the individual may be contacted."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Contact"
+                    }
+                ],
+                "linkId": "Patient.telecom",
+                "text": "A contact detail for the individual",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Patient.telecom.type",
+                        "text": "type:",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/contact-system"
+                        }
+                    },
+                    {
+                        "linkId": "Patient.telecom.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "code"
+                    }
+                ],
+                "linkId": "Patient.gender",
+                "text": "male | female | other | unknown",
+                "question": [
+                    {
+                        "linkId": "Patient.gender.value",
+                        "text": "Gender",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/administrative-gender"
+                        }
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The date and time of birth for the individual."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "datetime"
+                    }
+                ],
+                "linkId": "Patient.birthDate",
+                "question": [
+                    {
+                        "linkId": "Patient.birthDate.value",
+                        "text": "The date and time of birth for the individual",
+                        "type": "dateTime"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Indicates if the individual is deceased or not."
+                    }
+                ],
+                "linkId": "Patient.deceased[x]",
+                "text": "Indicates if the individual is deceased or not",
+                "question": [
+                    {
+                        "linkId": "Patient.deceased[x]._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs1"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "boolean"
+                                    }
+                                ],
+                                "linkId": "Patient.deceased[x]._boolean",
+                                "question": [
+                                    {
+                                        "linkId": "Patient.deceased[x]._boolean.value",
+                                        "text": "boolean",
+                                        "type": "boolean"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "datetime"
+                                    }
+                                ],
+                                "linkId": "Patient.deceased[x]._dateTime",
+                                "question": [
+                                    {
+                                        "linkId": "Patient.deceased[x]._dateTime.value",
+                                        "text": "dateTime",
+                                        "type": "dateTime"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Addresses for the individual."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Address"
+                    }
+                ],
+                "linkId": "Patient.address",
+                "text": "Addresses for the individual",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Patient.address.text",
+                        "text": "text:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Patient.address.line",
+                        "text": "line:",
+                        "type": "string",
+                        "repeats": true
+                    },
+                    {
+                        "linkId": "Patient.address.city",
+                        "text": "city:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Patient.address.state",
+                        "text": "state:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Patient.address.zip",
+                        "text": "zip:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Patient.address.country",
+                        "text": "country:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "This field contains a patient's most recent marital (civil) status. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "Patient.maritalStatus",
+                "text": "Marital (civil) status of a person",
+                "question": [
+                    {
+                        "linkId": "Patient.maritalStatus.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/marital-status"
+                        }
+                    },
+                    {
+                        "linkId": "Patient.maritalStatus.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Indicates whether the patient is part of a multiple or indicates the actual birth order. null"
+                    }
+                ],
+                "linkId": "Patient.multipleBirth[x]",
+                "text": "Whether patient is part of a multiple birth",
+                "question": [
+                    {
+                        "linkId": "Patient.multipleBirth[x]._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs2"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "boolean"
+                                    }
+                                ],
+                                "linkId": "Patient.multipleBirth[x]._boolean",
+                                "question": [
+                                    {
+                                        "linkId": "Patient.multipleBirth[x]._boolean.value",
+                                        "text": "boolean",
+                                        "type": "boolean"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "integer"
+                                    }
+                                ],
+                                "linkId": "Patient.multipleBirth[x]._integer",
+                                "question": [
+                                    {
+                                        "linkId": "Patient.multipleBirth[x]._integer.value",
+                                        "text": "integer",
+                                        "type": "integer"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Image of the person. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Attachment"
+                    }
+                ],
+                "linkId": "Patient.photo",
+                "text": "Image of the person",
+                "repeats": true
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A contact party (e.g. guardian, partner, friend) for the patient."
+                    }
+                ],
+                "linkId": "Patient.contact",
+                "title": "A contact party (e.g. guardian, partner, friend) for the patient",
+                "text": "Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.",
+                "repeats": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "The nature of the relationship between the patient and the contact person. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "Patient.contact.relationship",
+                        "text": "The kind of relationship",
+                        "repeats": true,
+                        "question": [
+                            {
+                                "linkId": "Patient.contact.relationship.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true,
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/patient-contact-relationship"
+                                }
+                            },
+                            {
+                                "linkId": "Patient.contact.relationship.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "A name associated with the person. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "Name"
+                            }
+                        ],
+                        "linkId": "Patient.contact.name",
+                        "text": "A name associated with the person",
+                        "question": [
+                            {
+                                "linkId": "Patient.contact.name.text",
+                                "text": "text:",
+                                "type": "string"
+                            },
+                            {
+                                "linkId": "Patient.contact.name.family",
+                                "text": "family:",
+                                "type": "string",
+                                "repeats": true
+                            },
+                            {
+                                "linkId": "Patient.contact.name.given",
+                                "text": "given:",
+                                "type": "string",
+                                "repeats": true
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "A contact detail for the person, e.g. a telephone number or an email address."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "Contact"
+                            }
+                        ],
+                        "linkId": "Patient.contact.telecom",
+                        "text": "A contact detail for the person",
+                        "repeats": true,
+                        "question": [
+                            {
+                                "linkId": "Patient.contact.telecom.type",
+                                "text": "type:",
+                                "type": "choice",
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/contact-system"
+                                }
+                            },
+                            {
+                                "linkId": "Patient.contact.telecom.value",
+                                "text": "value:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Address for the contact person. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "Address"
+                            }
+                        ],
+                        "linkId": "Patient.contact.address",
+                        "text": "Address for the contact person",
+                        "question": [
+                            {
+                                "linkId": "Patient.contact.address.text",
+                                "text": "text:",
+                                "type": "string"
+                            },
+                            {
+                                "linkId": "Patient.contact.address.line",
+                                "text": "line:",
+                                "type": "string",
+                                "repeats": true
+                            },
+                            {
+                                "linkId": "Patient.contact.address.city",
+                                "text": "city:",
+                                "type": "string"
+                            },
+                            {
+                                "linkId": "Patient.contact.address.state",
+                                "text": "state:",
+                                "type": "string"
+                            },
+                            {
+                                "linkId": "Patient.contact.address.zip",
+                                "text": "zip:",
+                                "type": "string"
+                            },
+                            {
+                                "linkId": "Patient.contact.address.country",
+                                "text": "country:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "code"
+                            }
+                        ],
+                        "linkId": "Patient.contact.gender",
+                        "text": "male | female | other | unknown",
+                        "question": [
+                            {
+                                "linkId": "Patient.contact.gender.value",
+                                "text": "Gender",
+                                "type": "choice",
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/administrative-gender"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Organization on behalf of which the contact is acting or for which the contact is working. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "ResourceReference"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                            }
+                        ],
+                        "linkId": "Patient.contact.organization",
+                        "question": [
+                            {
+                                "linkId": "Patient.contact.organization.value",
+                                "text": "Organization that is associated with the contact",
+                                "type": "reference"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "This element has a value if the patient is an animal."
+                    }
+                ],
+                "linkId": "Patient.animal",
+                "title": "If this patient is an animal (non-human)",
+                "text": "The animal element is labeled \"Is Modifier\" since patients may be non-human. Systems SHALL either handle patient details appropriately (e.g. inform users patient is not human) or reject non-human patient records.",
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Identifies the high level categorization of the kind of animal."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "Patient.animal.species",
+                        "text": "E.g. Dog, Cow",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Patient.animal.species.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true,
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/animal-species"
+                                }
+                            },
+                            {
+                                "linkId": "Patient.animal.species.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Identifies the detailed categorization of the kind of animal. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "Patient.animal.breed",
+                        "text": "E.g. Poodle, Angus",
+                        "question": [
+                            {
+                                "linkId": "Patient.animal.breed.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true,
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/animal-breeds"
+                                }
+                            },
+                            {
+                                "linkId": "Patient.animal.breed.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Indicates the current state of the animal's reproductive organs. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "Patient.animal.genderStatus",
+                        "text": "E.g. Neutered, Intact",
+                        "question": [
+                            {
+                                "linkId": "Patient.animal.genderStatus.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true,
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/animal-genderstatus"
+                                }
+                            },
+                            {
+                                "linkId": "Patient.animal.genderStatus.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Languages which may be used to communicate with the patient about his or her health."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "Patient.communication",
+                "text": "Languages which may be used to communicate with the patient about his or her health",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Patient.communication.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true
+                    },
+                    {
+                        "linkId": "Patient.communication.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Patient's nominated care provider. null"
+                    }
+                ],
+                "linkId": "Patient.careProvider",
+                "text": "Patient's nominated care provider",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Patient.careProvider._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs3"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Patient.careProvider._Organization",
+                                "question": [
+                                    {
+                                        "linkId": "Patient.careProvider._Organization.value",
+                                        "text": "Organization",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Patient.careProvider._Practitioner",
+                                "question": [
+                                    {
+                                        "linkId": "Patient.careProvider._Practitioner.value",
+                                        "text": "Practitioner",
+                                        "type": "reference"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Organization that is the custodian of the patient record. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "Patient.managingOrganization",
+                "question": [
+                    {
+                        "linkId": "Patient.managingOrganization.value",
+                        "text": "Organization that is the custodian of the patient record",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Link to another patient resource that concerns the same actual person."
+                    }
+                ],
+                "linkId": "Patient.link",
+                "title": "Link to another patient resource that concerns the same actual person",
+                "text": "There is no assumption that linked patient records have mutual links.",
+                "repeats": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "The other patient resource that the link refers to. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "ResourceReference"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                            }
+                        ],
+                        "linkId": "Patient.link.other",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Patient.link.other.value",
+                                "text": "The other patient resource that the link refers to",
+                                "type": "reference"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "The type of link between this patient resource and another patient resource. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "code"
+                            }
+                        ],
+                        "linkId": "Patient.link.type",
+                        "text": "replace | refer | seealso - type of link",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Patient.link.type.value",
+                                "text": "Type",
+                                "type": "choice",
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/link-type"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Whether this patient record is in active use."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "boolean"
+                    }
+                ],
+                "linkId": "Patient.active",
+                "question": [
+                    {
+                        "linkId": "Patient.active.value",
+                        "text": "Whether this patient's record is in active use",
+                        "type": "boolean"
+                    }
+                ]
+            }
+        ]
+    }
+}

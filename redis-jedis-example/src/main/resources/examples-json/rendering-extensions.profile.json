@@ -1,0 +1,120 @@
+{
+    "resourceType": "Profile",
+    "text": {
+        "status": "generated",
+        "div": "<div>to do</div>"
+    },
+    "url": "http://hl7.org/fhir/Profile/rendering-extensions",
+    "name": "Extensions for rendering data elements",
+    "publisher": "HL7 FHIR project",
+    "telecom": [
+        {
+            "system": "url",
+            "value": "http://hl7.org/fhir"
+        }
+    ],
+    "description": "A set of extensions dealing with controlling how particular data elements are rendered when displayed.  Initially created for questionnaires, but potentially useable elsewhere.",
+    "status": "draft",
+    "date": "2014-04-23",
+    "mapping": [
+        {
+            "identity": "rim",
+            "uri": "http://hl7.org/v3",
+            "name": "RIM"
+        }
+    ],
+    "extensionDefn": [
+        {
+            "code": "style",
+            "display": "Html style value",
+            "contextType": "datatype",
+            "context": [
+                "*"
+            ],
+            "element": [
+                {
+                    "path": "style",
+                    "definition": {
+                        "short": "Html style value",
+                        "formal": "Identifies how the specified element should be rendered when displayed.",
+                        "comments": "This extension would be equivalent to setting the HTML \"style\" attribute on the root element for the element containing the extension.",
+                        "min": 0,
+                        "max": "1",
+                        "type": [
+                            {
+                                "code": "string"
+                            }
+                        ],
+                        "mustSupport": false,
+                        "isModifier": false,
+                        "mapping": [
+                            {
+                                "identity": "rim",
+                                "map": "N/A"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "code": "markup",
+            "display": "String equivalent with html markup",
+            "contextType": "datatype",
+            "context": [
+                "string"
+            ],
+            "element": [
+                {
+                    "path": "markup",
+                    "definition": {
+                        "short": "String equivalent with html markup",
+                        "formal": "This is an equivalent of the string on which the extension is sent, but includes additional XHTML markup, such as bold, italics, styles, tables, etc.",
+                        "min": 0,
+                        "max": "1",
+                        "type": [
+                            {
+                                "code": "string"
+                            }
+                        ],
+                        "mustSupport": false,
+                        "isModifier": false,
+                        "mapping": [
+                            {
+                                "identity": "rim",
+                                "map": "ED can be XHTML content"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "code": "styleSensitive",
+            "display": "Are styles important for processing?",
+            "contextType": "resource",
+            "context": [
+                "*"
+            ],
+            "element": [
+                {
+                    "path": "styleSensitive",
+                    "definition": {
+                        "short": "Are styles important for processing?",
+                        "formal": "Indicates that the style extensions in this resource are essential to the interpretation of the styled text and that it cannot be rendered without the style without losing essential information.",
+                        "comments": "If set to true, all systems that claim to support this extension and which render elements of the resource containing this extension SHALL either render the content as required by the style extensions defined by this profile that are present in the resource or shall (if safe to do so based on their own rules), omit entirely the styled content they cannot render in accordance with the extensions.",
+                        "min": 0,
+                        "max": "1",
+                        "type": [
+                            {
+                                "code": "boolean"
+                            }
+                        ],
+                        "mustSupport": false,
+                        "isModifier": false
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,984 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: Condition</p><p><b>title</b>: Detailed information about conditions, problems or diagnoses</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "contained": [
+        {
+            "resourceType": "ValueSet",
+            "id": "vs1",
+            "name": "Type options for Condition.asserter",
+            "description": "Type options for Condition.asserter",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:901345dc-70e0-47ed-a387-867ec922ee98",
+                "concept": [
+                    {
+                        "code": "Practitioner",
+                        "display": "Practitioner"
+                    },
+                    {
+                        "code": "Patient",
+                        "display": "Patient"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "ValueSet",
+            "id": "vs2",
+            "name": "Type options for Condition.onset[x]",
+            "description": "Type options for Condition.onset[x]",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:120a0ec3-63c3-440c-9723-008e37b382bc",
+                "concept": [
+                    {
+                        "code": "date",
+                        "display": "date"
+                    },
+                    {
+                        "code": "Age",
+                        "display": "Age"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "ValueSet",
+            "id": "vs3",
+            "name": "Type options for Condition.abatement[x]",
+            "description": "Type options for Condition.abatement[x]",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:640c45fc-cbf2-4207-8226-16a10bf8199a",
+                "concept": [
+                    {
+                        "code": "date",
+                        "display": "date"
+                    },
+                    {
+                        "code": "Age",
+                        "display": "Age"
+                    },
+                    {
+                        "code": "boolean",
+                        "display": "boolean"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "ValueSet",
+            "id": "vs4",
+            "name": "Type options for Condition.relatedItem.target",
+            "description": "Type options for Condition.relatedItem.target",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:873980a9-a19e-4648-96e9-868dc5afd1a7",
+                "concept": [
+                    {
+                        "code": "Condition",
+                        "display": "Condition"
+                    },
+                    {
+                        "code": "Procedure",
+                        "display": "Procedure"
+                    },
+                    {
+                        "code": "MedicationAdministration",
+                        "display": "MedicationAdministration"
+                    },
+                    {
+                        "code": "Immunization",
+                        "display": "Immunization"
+                    },
+                    {
+                        "code": "MedicationStatement",
+                        "display": "MedicationStatement"
+                    }
+                ]
+            }
+        }
+    ],
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "Use to record detailed information about conditions, problems or diagnoses recognized by a clinician. There are many uses including: recording a Diagnosis during an Encounter; populating a problem List or a Summary Statement, such as a Discharge Summary."
+            }
+        ],
+        "linkId": "Condition",
+        "title": "Detailed information about conditions, problems or diagnoses",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "This records identifiers associated with this condition that are defined by business processed and/ or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation). null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Identifier"
+                    }
+                ],
+                "linkId": "Condition.identifier",
+                "text": "External Ids for this condition",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Condition.identifier.label",
+                        "text": "label:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Condition.identifier.system",
+                        "text": "system:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Condition.identifier.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Indicates the patient who the condition record is associated with. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "Condition.subject",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "Condition.subject.value",
+                        "text": "Who has the condition?",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Encounter during which the condition was first asserted. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Encounter?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "Condition.encounter",
+                "question": [
+                    {
+                        "linkId": "Condition.encounter.value",
+                        "text": "Encounter when condition first asserted",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Person who takes responsibility for asserting the existence of the condition as part of the electronic record. null"
+                    }
+                ],
+                "linkId": "Condition.asserter",
+                "text": "Person who asserts this condition",
+                "question": [
+                    {
+                        "linkId": "Condition.asserter._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs1"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Condition.asserter._Practitioner",
+                                "question": [
+                                    {
+                                        "linkId": "Condition.asserter._Practitioner.value",
+                                        "text": "Practitioner",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Condition.asserter._Patient",
+                                "question": [
+                                    {
+                                        "linkId": "Condition.asserter._Patient.value",
+                                        "text": "Patient",
+                                        "type": "reference"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Estimated or actual date the condition/problem/diagnosis was first detected/suspected. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "datetime"
+                    }
+                ],
+                "linkId": "Condition.dateAsserted",
+                "question": [
+                    {
+                        "linkId": "Condition.dateAsserted.value",
+                        "text": "When first detected/suspected/entered",
+                        "type": "dateTime"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Identification of the condition, problem or diagnosis. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "Condition.code",
+                "text": "Identification of the condition, problem or diagnosis",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "Condition.code.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/condition-code"
+                        }
+                    },
+                    {
+                        "linkId": "Condition.code.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A category assigned to the condition. E.g. complaint | symptom | finding | diagnosis."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "Condition.category",
+                "text": "E.g. complaint | symptom | finding | diagnosis",
+                "question": [
+                    {
+                        "linkId": "Condition.category.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/condition-category"
+                        }
+                    },
+                    {
+                        "linkId": "Condition.category.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The clinical status of the condition. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "code"
+                    }
+                ],
+                "linkId": "Condition.status",
+                "text": "provisional | working | confirmed | refuted",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "Condition.status.value",
+                        "text": "Status",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/condition-status"
+                        }
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The degree of confidence that this condition is correct."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "Condition.certainty",
+                "text": "Degree of confidence",
+                "question": [
+                    {
+                        "linkId": "Condition.certainty.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/condition-certainty"
+                        }
+                    },
+                    {
+                        "linkId": "Condition.certainty.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A subjective assessment of the severity of the condition as evaluated by the clinician."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "Condition.severity",
+                "text": "Subjective severity of condition",
+                "question": [
+                    {
+                        "linkId": "Condition.severity.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/condition-severity"
+                        }
+                    },
+                    {
+                        "linkId": "Condition.severity.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Estimated or actual date the condition began, in the opinion of the clinician."
+                    }
+                ],
+                "linkId": "Condition.onset[x]",
+                "text": "Estimated or actual date, or age",
+                "question": [
+                    {
+                        "linkId": "Condition.onset[x]._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs2"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "datetime"
+                                    }
+                                ],
+                                "linkId": "Condition.onset[x]._date",
+                                "question": [
+                                    {
+                                        "linkId": "Condition.onset[x]._date.value",
+                                        "text": "date",
+                                        "type": "dateTime"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "Age"
+                                    }
+                                ],
+                                "linkId": "Condition.onset[x]._Age",
+                                "text": "Age",
+                                "question": [
+                                    {
+                                        "linkId": "Condition.onset[x]._Age.comparator",
+                                        "text": "comp:",
+                                        "type": "choice",
+                                        "options": {
+                                            "reference": "http://hl7.org/fhir/vs/quantity-comparator"
+                                        }
+                                    },
+                                    {
+                                        "linkId": "Condition.onset[x]._Age.value",
+                                        "text": "value:",
+                                        "type": "decimal"
+                                    },
+                                    {
+                                        "linkId": "Condition.onset[x]._Age.units",
+                                        "text": "units:",
+                                        "type": "choice"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The date or estimated date that the condition resolved or went into remission. This is called \"abatement\" because of the many overloaded connotations associated with \"remission\" or \"resolution\" - Conditions are never really resolved, but they can abate."
+                    }
+                ],
+                "linkId": "Condition.abatement[x]",
+                "text": "If/when in resolution/remission",
+                "question": [
+                    {
+                        "linkId": "Condition.abatement[x]._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs3"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "datetime"
+                                    }
+                                ],
+                                "linkId": "Condition.abatement[x]._date",
+                                "question": [
+                                    {
+                                        "linkId": "Condition.abatement[x]._date.value",
+                                        "text": "date",
+                                        "type": "dateTime"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "Age"
+                                    }
+                                ],
+                                "linkId": "Condition.abatement[x]._Age",
+                                "text": "Age",
+                                "question": [
+                                    {
+                                        "linkId": "Condition.abatement[x]._Age.comparator",
+                                        "text": "comp:",
+                                        "type": "choice",
+                                        "options": {
+                                            "reference": "http://hl7.org/fhir/vs/quantity-comparator"
+                                        }
+                                    },
+                                    {
+                                        "linkId": "Condition.abatement[x]._Age.value",
+                                        "text": "value:",
+                                        "type": "decimal"
+                                    },
+                                    {
+                                        "linkId": "Condition.abatement[x]._Age.units",
+                                        "text": "units:",
+                                        "type": "choice"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "boolean"
+                                    }
+                                ],
+                                "linkId": "Condition.abatement[x]._boolean",
+                                "question": [
+                                    {
+                                        "linkId": "Condition.abatement[x]._boolean.value",
+                                        "text": "boolean",
+                                        "type": "boolean"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Clinical stage or grade of a condition. May include formal severity assessments."
+                    }
+                ],
+                "linkId": "Condition.stage",
+                "title": "Stage/grade, usually assessed formally",
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "A simple summary of the stage such as \"Stage 3\". The determination of the stage is disease-specific. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "Condition.stage.summary",
+                        "text": "Simple summary (disease specific)",
+                        "question": [
+                            {
+                                "linkId": "Condition.stage.summary.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true
+                            },
+                            {
+                                "linkId": "Condition.stage.summary.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Reference to a formal record of the evidence on which the staging assessment is based. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "ResourceReference"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                            }
+                        ],
+                        "linkId": "Condition.stage.assessment",
+                        "repeats": true,
+                        "question": [
+                            {
+                                "linkId": "Condition.stage.assessment.value",
+                                "text": "Formal record of assessment",
+                                "type": "reference"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Supporting Evidence / manifestations that are the basis on which this condition is suspected or confirmed."
+                    }
+                ],
+                "linkId": "Condition.evidence",
+                "title": "Supporting evidence",
+                "text": "The evidence may be a simple list of coded symptoms/manifestations, or references to observations or formal assessments, or both.",
+                "repeats": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "A manifestation or symptom that led to the recording of this condition. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "Condition.evidence.code",
+                        "text": "Manifestation/symptom",
+                        "question": [
+                            {
+                                "linkId": "Condition.evidence.code.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true
+                            },
+                            {
+                                "linkId": "Condition.evidence.code.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Links to other relevant information, including pathology reports. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "ResourceReference"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                            }
+                        ],
+                        "linkId": "Condition.evidence.detail",
+                        "repeats": true,
+                        "question": [
+                            {
+                                "linkId": "Condition.evidence.detail.value",
+                                "text": "Supporting information found elsewhere",
+                                "type": "reference"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The anatomical location where this condition manifests itself."
+                    }
+                ],
+                "linkId": "Condition.location",
+                "title": "Anatomical location, if relevant",
+                "text": "May be a summary code, or a reference to a very precise definition of the location, or both.",
+                "repeats": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Code that identifies the structural location."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "Condition.location.code",
+                        "text": "Location - may include laterality",
+                        "question": [
+                            {
+                                "linkId": "Condition.location.code.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true
+                            },
+                            {
+                                "linkId": "Condition.location.code.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Detailed anatomical location information. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "string"
+                            }
+                        ],
+                        "linkId": "Condition.location.detail",
+                        "question": [
+                            {
+                                "linkId": "Condition.location.detail.value",
+                                "text": "Precise location details",
+                                "type": "string"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Further conditions, problems, diagnoses, procedures or events that are related in some way to this condition, or the substance that caused/triggered this Condition."
+                    }
+                ],
+                "linkId": "Condition.relatedItem",
+                "title": "Causes or precedents for this Condition",
+                "text": "Although a condition may be caused by a substance, this is not intended to be used to record allergies/adverse reactions to substances.",
+                "repeats": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "The type of relationship that this condition has to the related item. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "code"
+                            }
+                        ],
+                        "linkId": "Condition.relatedItem.type",
+                        "text": "due-to | following",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Condition.relatedItem.type.value",
+                                "text": "Type",
+                                "type": "choice",
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/condition-relationship-type"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Code that identifies the target of this relationship. The code takes the place of a detailed instance target. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "Condition.relatedItem.code",
+                        "text": "Relationship target by means of a predefined code",
+                        "question": [
+                            {
+                                "linkId": "Condition.relatedItem.code.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true,
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/condition-code"
+                                }
+                            },
+                            {
+                                "linkId": "Condition.relatedItem.code.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Target of the relationship. null"
+                            }
+                        ],
+                        "linkId": "Condition.relatedItem.target",
+                        "text": "Relationship target resource",
+                        "question": [
+                            {
+                                "linkId": "Condition.relatedItem.target._type",
+                                "text": "type",
+                                "type": "choice",
+                                "options": {
+                                    "reference": "#vs4"
+                                },
+                                "group": [
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "ResourceReference"
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                                "valueString": "/Condition?subject=$subj&patient=$subj&encounter=$encounter"
+                                            }
+                                        ],
+                                        "linkId": "Condition.relatedItem.target._Condition",
+                                        "question": [
+                                            {
+                                                "linkId": "Condition.relatedItem.target._Condition.value",
+                                                "text": "Condition",
+                                                "type": "reference"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "ResourceReference"
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                                "valueString": "/Procedure?subject=$subj&patient=$subj&encounter=$encounter"
+                                            }
+                                        ],
+                                        "linkId": "Condition.relatedItem.target._Procedure",
+                                        "question": [
+                                            {
+                                                "linkId": "Condition.relatedItem.target._Procedure.value",
+                                                "text": "Procedure",
+                                                "type": "reference"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "ResourceReference"
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                                "valueString": "/MedicationAdministration?subject=$subj&patient=$subj&encounter=$encounter"
+                                            }
+                                        ],
+                                        "linkId": "Condition.relatedItem.target._MedicationAdministration",
+                                        "question": [
+                                            {
+                                                "linkId": "Condition.relatedItem.target._MedicationAdministration.value",
+                                                "text": "MedicationAdministration",
+                                                "type": "reference"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "ResourceReference"
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                                "valueString": "/Immunization?subject=$subj&patient=$subj&encounter=$encounter"
+                                            }
+                                        ],
+                                        "linkId": "Condition.relatedItem.target._Immunization",
+                                        "question": [
+                                            {
+                                                "linkId": "Condition.relatedItem.target._Immunization.value",
+                                                "text": "Immunization",
+                                                "type": "reference"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "ResourceReference"
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                                "valueString": "/MedicationStatement?subject=$subj&patient=$subj&encounter=$encounter"
+                                            }
+                                        ],
+                                        "linkId": "Condition.relatedItem.target._MedicationStatement",
+                                        "question": [
+                                            {
+                                                "linkId": "Condition.relatedItem.target._MedicationStatement.value",
+                                                "text": "MedicationStatement",
+                                                "type": "reference"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Additional information about the Condition. This is a general notes/comments entry  for description of the Condition, its diagnosis and prognosis. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "Condition.notes",
+                "question": [
+                    {
+                        "linkId": "Condition.notes.value",
+                        "text": "Additional information about the Condition",
+                        "type": "string"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,644 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: MessageHeader</p><p><b>title</b>: A resource that describes a message that is exchanged between systems</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "contained": [
+        {
+            "resourceType": "ValueSet",
+            "id": "vs1",
+            "name": "Type options for MessageHeader.receiver",
+            "description": "Type options for MessageHeader.receiver",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:15632985-8fa9-4c38-b5da-1674f22e8a8d",
+                "concept": [
+                    {
+                        "code": "Practitioner",
+                        "display": "Practitioner"
+                    },
+                    {
+                        "code": "Organization",
+                        "display": "Organization"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "ValueSet",
+            "id": "vs2",
+            "name": "Type options for MessageHeader.responsible",
+            "description": "Type options for MessageHeader.responsible",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:f89cb95d-2645-43c4-a642-cbac21c28cbd",
+                "concept": [
+                    {
+                        "code": "Practitioner",
+                        "display": "Practitioner"
+                    },
+                    {
+                        "code": "Organization",
+                        "display": "Organization"
+                    }
+                ]
+            }
+        }
+    ],
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "The header for a message exchange that is either requesting or responding to an action.  The resource(s) that are the subject of the action as well as other Information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle."
+            }
+        ],
+        "linkId": "MessageHeader",
+        "title": "A resource that describes a message that is exchanged between systems",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The identifier of this message."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "MessageHeader.identifier",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "MessageHeader.identifier.value",
+                        "text": "Id of this message",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The time that the message was sent. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "instant"
+                    }
+                ],
+                "linkId": "MessageHeader.timestamp",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "MessageHeader.timestamp.value",
+                        "text": "Time that the message was sent",
+                        "type": "instant"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Code that identifies the event this message represents and connects it with it's definition. Events defined as part of the FHIR specification have the system value \"http://hl7.org/fhir/message-type\". null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Coding"
+                    }
+                ],
+                "linkId": "MessageHeader.event",
+                "text": "Code for the event this message represents",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "MessageHeader.event.value",
+                        "text": "Code:",
+                        "type": "open-choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/message-events"
+                        }
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Information about the message that this message is a response to.  Only present if this message is a response."
+                    }
+                ],
+                "linkId": "MessageHeader.response",
+                "title": "If this is a reply to prior message",
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "The id of the message that this message is a response to. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "string"
+                            }
+                        ],
+                        "linkId": "MessageHeader.response.identifier",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "MessageHeader.response.identifier.value",
+                                "text": "Id of original message",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Code that identifies the type of response to the message - whether it was successful or not, and whether it should be resent or not."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "code"
+                            }
+                        ],
+                        "linkId": "MessageHeader.response.code",
+                        "text": "ok | transient-error | fatal-error",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "MessageHeader.response.code.value",
+                                "text": "Code",
+                                "type": "choice",
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/response-code"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Full details of any issues found in the message."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "ResourceReference"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                "valueString": "/OperationOutcome?subject=$subj&patient=$subj&encounter=$encounter"
+                            }
+                        ],
+                        "linkId": "MessageHeader.response.details",
+                        "question": [
+                            {
+                                "linkId": "MessageHeader.response.details.value",
+                                "text": "Specific list of hints/warnings/errors",
+                                "type": "reference"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The source application from which this message originated."
+                    }
+                ],
+                "linkId": "MessageHeader.source",
+                "title": "Message Source Application",
+                "required": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Human-readable name for the target system. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "string"
+                            }
+                        ],
+                        "linkId": "MessageHeader.source.name",
+                        "question": [
+                            {
+                                "linkId": "MessageHeader.source.name.value",
+                                "text": "Name of system",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "May include configuration or other information useful in debugging. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "string"
+                            }
+                        ],
+                        "linkId": "MessageHeader.source.software",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "MessageHeader.source.software.value",
+                                "text": "Name of software running the system",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Can convey versions of multiple systems in situations where a message passes through multiple hands. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "string"
+                            }
+                        ],
+                        "linkId": "MessageHeader.source.version",
+                        "question": [
+                            {
+                                "linkId": "MessageHeader.source.version.value",
+                                "text": "Version of software running",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "An e-mail, phone, website or other contact point to use to resolve issues with message communications. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "Contact"
+                            }
+                        ],
+                        "linkId": "MessageHeader.source.contact",
+                        "text": "Human contact for problems",
+                        "question": [
+                            {
+                                "linkId": "MessageHeader.source.contact.type",
+                                "text": "type:",
+                                "type": "choice",
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/contact-system"
+                                }
+                            },
+                            {
+                                "linkId": "MessageHeader.source.contact.value",
+                                "text": "value:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Identifies the routing target to send acknowledgements to."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "uri"
+                            }
+                        ],
+                        "linkId": "MessageHeader.source.endpoint",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "MessageHeader.source.endpoint.value",
+                                "text": "Actual message source address or id",
+                                "type": "string"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The destination application which the message is intended for."
+                    }
+                ],
+                "linkId": "MessageHeader.destination",
+                "title": "Message Destination Application(s)",
+                "text": "there SHOULD be at least one destination, but in some circumstances, the source system is unaware of any particular destination system.",
+                "repeats": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Human-readable name for the source system. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "string"
+                            }
+                        ],
+                        "linkId": "MessageHeader.destination.name",
+                        "question": [
+                            {
+                                "linkId": "MessageHeader.destination.name.value",
+                                "text": "Name of system",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Identifies the target end system in situations where the initial message transmission is to an intermediary system. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "ResourceReference"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                "valueString": "/Device?subject=$subj&patient=$subj&encounter=$encounter"
+                            }
+                        ],
+                        "linkId": "MessageHeader.destination.target",
+                        "question": [
+                            {
+                                "linkId": "MessageHeader.destination.target.value",
+                                "text": "Particular delivery destination within the destination",
+                                "type": "reference"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Indicates where the message should be routed to."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "uri"
+                            }
+                        ],
+                        "linkId": "MessageHeader.destination.endpoint",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "MessageHeader.destination.endpoint.value",
+                                "text": "Actual destination address or id",
+                                "type": "string"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The person or device that performed the data entry leading to this message. Where there is more than one candidate, pick the most proximal to the message. Can provide other enterers in extensions."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "MessageHeader.enterer",
+                "question": [
+                    {
+                        "linkId": "MessageHeader.enterer.value",
+                        "text": "The source of the data entry",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The logical author of the message - the person or device that decided the described event should happen. Where there is more than one candidate, pick the most proximal to the MessageHeader. Can provide other authors in extensions."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "MessageHeader.author",
+                "question": [
+                    {
+                        "linkId": "MessageHeader.author.value",
+                        "text": "The source of the decision",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Allows data conveyed by a message to be addressed to a particular person or department when routing to a specific application isn't sufficient. null"
+                    }
+                ],
+                "linkId": "MessageHeader.receiver",
+                "text": "Intended \"real-world\" recipient for the data",
+                "question": [
+                    {
+                        "linkId": "MessageHeader.receiver._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs1"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "MessageHeader.receiver._Practitioner",
+                                "question": [
+                                    {
+                                        "linkId": "MessageHeader.receiver._Practitioner.value",
+                                        "text": "Practitioner",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "MessageHeader.receiver._Organization",
+                                "question": [
+                                    {
+                                        "linkId": "MessageHeader.receiver._Organization.value",
+                                        "text": "Organization",
+                                        "type": "reference"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The person or organization that accepts overall responsibility for the contents of the message. The implication is that the message event happened under the policies of the responsible party."
+                    }
+                ],
+                "linkId": "MessageHeader.responsible",
+                "text": "Final responsibility for event",
+                "question": [
+                    {
+                        "linkId": "MessageHeader.responsible._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs2"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "MessageHeader.responsible._Practitioner",
+                                "question": [
+                                    {
+                                        "linkId": "MessageHeader.responsible._Practitioner.value",
+                                        "text": "Practitioner",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "MessageHeader.responsible._Organization",
+                                "question": [
+                                    {
+                                        "linkId": "MessageHeader.responsible._Organization.value",
+                                        "text": "Organization",
+                                        "type": "reference"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Coded indication of the cause for the event - indicates  a reason for the occurance of the event that is a focus of this message. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "MessageHeader.reason",
+                "text": "Cause of event",
+                "question": [
+                    {
+                        "linkId": "MessageHeader.reason.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/message-reason-encounter"
+                        }
+                    },
+                    {
+                        "linkId": "MessageHeader.reason.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The actual data of the message - a reference to the root/focus class of the event."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "MessageHeader.data",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "MessageHeader.data.value",
+                        "text": "The actual content of the message",
+                        "type": "reference"
+                    }
+                ]
+            }
+        ]
+    }
+}

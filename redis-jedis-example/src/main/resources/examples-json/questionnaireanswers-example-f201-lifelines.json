@@ -1,0 +1,84 @@
+{"resourceType": "QuestionnaireAnswers", "text": {
+    "status": "generated",
+    "div": "<div>\n      <p>\n        <b>Generated Narrative with Details</b>\n      </p>\n      <p>\n        <b>status</b>: completed\n      </p>\n      <p>\n        <b>subject</b>: \n        <a href=\"Patient/f201\">Roel</a>\n      </p>\n      <p>\n        <b>author</b>: \n        <a href=\"Practitioner/f201\">Practitioner/f201</a>\n      </p>\n      <p>\n        <b>authored</b>: 18-Jun 2013 0:0\n      </p>\n      <p>\n        <b>source</b>: \n        <a href=\"Practitioner/f201\">Practitioner/f201</a>\n      </p>\n      <blockquote>\n        <p>\n          <b>group</b>\n        </p>\n        <blockquote>\n          <p>\n            <b>group</b>\n          </p>\n        </blockquote>\n        <blockquote>\n          <p>\n            <b>group</b>\n          </p>\n        </blockquote>\n        <blockquote>\n          <p>\n            <b>group</b>\n          </p>\n        </blockquote>\n      </blockquote>\n    </div>"
+}, "status": "completed", "subject": {
+    "reference": "Patient/f201",
+    "display": "Roel"
+}, "author": {
+    "reference": "Practitioner/f201"
+}, "authored": "2013-06-18T00:00:00+01:00", "source": {
+    "reference": "Practitioner/f201"
+}, "group": {
+    "group": [
+        {
+            "question": [
+                {
+                    "text": "Do you have allergies?",
+                    "answer": [
+                        {
+                            "valueString": "I am allergic to house dust"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "General questions",
+            "question": [
+                {
+                    "text": "What is your gender?",
+                    "answer": [
+                        {
+                            "valueString": "Male"
+                        }
+                    ]
+                },
+                {
+                    "text": "What is your date of birth?",
+                    "answer": [
+                        {
+                            "valueDate": "1960-03-13"
+                        }
+                    ]
+                },
+                {
+                    "text": "What is your country of birth?",
+                    "answer": [
+                        {
+                            "valueString": "The Netherlands"
+                        }
+                    ]
+                },
+                {
+                    "text": "What is your marital status?",
+                    "answer": [
+                        {
+                            "valueString": "married"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Intoxications",
+            "question": [
+                {
+                    "text": "Do you smoke?",
+                    "answer": [
+                        {
+                            "valueString": "No"
+                        }
+                    ]
+                },
+                {
+                    "text": "Do you drink alchohol?",
+                    "answer": [
+                        {
+                            "valueString": "No, but I used to drink"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}}

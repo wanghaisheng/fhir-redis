@@ -1,0 +1,238 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: Other</p><p><b>title</b>: Resource for non-supported content</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "contained": [
+        {
+            "resourceType": "ValueSet",
+            "id": "vs1",
+            "name": "Type options for Other.author",
+            "description": "Type options for Other.author",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:8c02ae2e-048a-4aba-947d-ae147d95f105",
+                "concept": [
+                    {
+                        "code": "Practitioner",
+                        "display": "Practitioner"
+                    },
+                    {
+                        "code": "Patient",
+                        "display": "Patient"
+                    },
+                    {
+                        "code": "RelatedPerson",
+                        "display": "RelatedPerson"
+                    }
+                ]
+            }
+        }
+    ],
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "Other is a conformant for handling resource concepts not yet defined for FHIR or outside HL7's scope of interest."
+            }
+        ],
+        "linkId": "Other",
+        "title": "Resource for non-supported content",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Identifier assigned to the resource for business purposes, outside the context of FHIR. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Identifier"
+                    }
+                ],
+                "linkId": "Other.identifier",
+                "text": "Business identifier",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Other.identifier.label",
+                        "text": "label:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Other.identifier.system",
+                        "text": "system:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Other.identifier.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Identifies the 'type' of resource - equivalent to the resource name for other resources."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "Other.code",
+                "text": "Kind of Resource",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "Other.code.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/other-resource-type"
+                        }
+                    },
+                    {
+                        "linkId": "Other.code.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Identifies the patient, practitioner, device or any other resource that is the \"focus\" of this resoruce."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "Other.subject",
+                "question": [
+                    {
+                        "linkId": "Other.subject.value",
+                        "text": "Identifies the",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Indicates who was responsible for creating the resource instance. null"
+                    }
+                ],
+                "linkId": "Other.author",
+                "text": "Who created",
+                "question": [
+                    {
+                        "linkId": "Other.author._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs1"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Other.author._Practitioner",
+                                "question": [
+                                    {
+                                        "linkId": "Other.author._Practitioner.value",
+                                        "text": "Practitioner",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Other.author._Patient",
+                                "question": [
+                                    {
+                                        "linkId": "Other.author._Patient.value",
+                                        "text": "Patient",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/RelatedPerson?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Other.author._RelatedPerson",
+                                "question": [
+                                    {
+                                        "linkId": "Other.author._RelatedPerson.value",
+                                        "text": "RelatedPerson",
+                                        "type": "reference"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Identifies when the resource was first created. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "datetime"
+                    }
+                ],
+                "linkId": "Other.created",
+                "question": [
+                    {
+                        "linkId": "Other.created.value",
+                        "text": "When created",
+                        "type": "dateTime"
+                    }
+                ]
+            }
+        ]
+    }
+}

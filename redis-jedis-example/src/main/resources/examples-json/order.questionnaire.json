@@ -1,0 +1,419 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: Order</p><p><b>title</b>: A request to perform an action</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "contained": [
+        {
+            "resourceType": "ValueSet",
+            "id": "vs1",
+            "name": "Type options for Order.target",
+            "description": "Type options for Order.target",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:0265d8c3-9906-4fdd-a229-c33e69f91eee",
+                "concept": [
+                    {
+                        "code": "Organization",
+                        "display": "Organization"
+                    },
+                    {
+                        "code": "Device",
+                        "display": "Device"
+                    },
+                    {
+                        "code": "Practitioner",
+                        "display": "Practitioner"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "ValueSet",
+            "id": "vs2",
+            "name": "Type options for Order.reason[x]",
+            "description": "Type options for Order.reason[x]",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:b147c368-d5cb-4c7b-92d2-3ddd6bfcda0f",
+                "concept": [
+                    {
+                        "code": "CodeableConcept",
+                        "display": "CodeableConcept"
+                    },
+                    {
+                        "code": "Any",
+                        "display": "Any"
+                    }
+                ]
+            }
+        }
+    ],
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "A request to perform an action."
+            }
+        ],
+        "linkId": "Order",
+        "title": "A request to perform an action",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Identifiers assigned to this order by the orderer or by the receiver. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Identifier"
+                    }
+                ],
+                "linkId": "Order.identifier",
+                "text": "Identifiers assigned to this order by the orderer or by the receiver",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Order.identifier.label",
+                        "text": "label:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Order.identifier.system",
+                        "text": "system:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Order.identifier.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "When the order was made. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "datetime"
+                    }
+                ],
+                "linkId": "Order.date",
+                "question": [
+                    {
+                        "linkId": "Order.date.value",
+                        "text": "When the order was made",
+                        "type": "dateTime"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Patient this order is about."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "Order.subject",
+                "question": [
+                    {
+                        "linkId": "Order.subject.value",
+                        "text": "Patient this order is about",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Who initiated the order. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "Order.source",
+                "question": [
+                    {
+                        "linkId": "Order.source.value",
+                        "text": "Who initiated the order",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Who is intended to fulfill the order. null"
+                    }
+                ],
+                "linkId": "Order.target",
+                "text": "Who is intended to fulfill the order",
+                "question": [
+                    {
+                        "linkId": "Order.target._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs1"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Order.target._Organization",
+                                "question": [
+                                    {
+                                        "linkId": "Order.target._Organization.value",
+                                        "text": "Organization",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Device?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Order.target._Device",
+                                "question": [
+                                    {
+                                        "linkId": "Order.target._Device.value",
+                                        "text": "Device",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Order.target._Practitioner",
+                                "question": [
+                                    {
+                                        "linkId": "Order.target._Practitioner.value",
+                                        "text": "Practitioner",
+                                        "type": "reference"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Text - why the order was made. null"
+                    }
+                ],
+                "linkId": "Order.reason[x]",
+                "text": "Text - why the order was made",
+                "question": [
+                    {
+                        "linkId": "Order.reason[x]._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs2"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "CodeableConcept"
+                                    }
+                                ],
+                                "linkId": "Order.reason[x]._CodeableConcept",
+                                "text": "CodeableConcept",
+                                "question": [
+                                    {
+                                        "linkId": "Order.reason[x]._CodeableConcept.coding",
+                                        "text": "code:",
+                                        "type": "open-choice",
+                                        "repeats": true
+                                    },
+                                    {
+                                        "linkId": "Order.reason[x]._CodeableConcept.text",
+                                        "text": "text:",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Order.reason[x]._Any",
+                                "question": [
+                                    {
+                                        "linkId": "Order.reason[x]._Any.value",
+                                        "text": "Any",
+                                        "type": "reference"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "If required by policy."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "Order.authority",
+                "question": [
+                    {
+                        "linkId": "Order.authority.value",
+                        "text": "If required by policy",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "When order should be fulfilled."
+                    }
+                ],
+                "linkId": "Order.when",
+                "title": "When order should be fulfilled",
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Code specifies when request should be done. The code may simply be a priority code."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "Order.when.code",
+                        "text": "Code specifies when request should be done. The code may simply be a priority code",
+                        "question": [
+                            {
+                                "linkId": "Order.when.code.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true
+                            },
+                            {
+                                "linkId": "Order.when.code.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "A formal schedule. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "Schedule"
+                            }
+                        ],
+                        "linkId": "Order.when.schedule",
+                        "text": "A formal schedule"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "What action is being ordered. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "Order.detail",
+                "required": true,
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Order.detail.value",
+                        "text": "What action is being ordered",
+                        "type": "reference"
+                    }
+                ]
+            }
+        ]
+    }
+}

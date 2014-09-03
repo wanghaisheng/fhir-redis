@@ -1,0 +1,23 @@
+{"resourceType": "Condition", "text": {
+    "status": "generated",
+    "div": "<div>Ischemic stroke, July 18, 2010</div>"
+}, "subject": {
+    "reference": "Patient/example"
+}, "code": {
+    "coding": [
+        {
+            "system": "http://snomed.info/sct",
+            "code": "422504002",
+            "display": "Ischemic stroke (disorder)"
+        }
+    ],
+    "text": "Stroke"
+}, "category": {
+    "coding": [
+        {
+            "system": "http://hl7.org/fhir/condition-category",
+            "code": "diagnosis",
+            "display": "Diagnosis"
+        }
+    ]
+}, "status": "confirmed", "onsetDate": "2010-07-18"}

@@ -1,0 +1,683 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: DiagnosticReport</p><p><b>title</b>: A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports</p><p><b>text</b>: This is intended to capture a single report,and is not suitable for use in displaying summary information that covers multiple reports.  For example, this resource has not been designed for laboratory cumulative reporting formats nor detailed structured reports for sequencing.</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "contained": [
+        {
+            "resourceType": "ValueSet",
+            "id": "vs1",
+            "name": "Type options for DiagnosticReport.subject",
+            "description": "Type options for DiagnosticReport.subject",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:1175481c-3f6d-4f2c-a348-371c37bafecb",
+                "concept": [
+                    {
+                        "code": "Patient",
+                        "display": "Patient"
+                    },
+                    {
+                        "code": "Group",
+                        "display": "Group"
+                    },
+                    {
+                        "code": "Device",
+                        "display": "Device"
+                    },
+                    {
+                        "code": "Location",
+                        "display": "Location"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "ValueSet",
+            "id": "vs2",
+            "name": "Type options for DiagnosticReport.performer",
+            "description": "Type options for DiagnosticReport.performer",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:405093e9-d934-4aa1-92be-511dddec14c2",
+                "concept": [
+                    {
+                        "code": "Practitioner",
+                        "display": "Practitioner"
+                    },
+                    {
+                        "code": "Organization",
+                        "display": "Organization"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "ValueSet",
+            "id": "vs3",
+            "name": "Type options for DiagnosticReport.diagnostic[x]",
+            "description": "Type options for DiagnosticReport.diagnostic[x]",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:469e5256-a53e-4a94-92ac-d7e217319663",
+                "concept": [
+                    {
+                        "code": "dateTime",
+                        "display": "dateTime"
+                    },
+                    {
+                        "code": "Period",
+                        "display": "Period"
+                    }
+                ]
+            }
+        }
+    ],
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretation, and formatted representation of diagnostic reports."
+            }
+        ],
+        "linkId": "DiagnosticReport",
+        "title": "A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports",
+        "text": "This is intended to capture a single report,and is not suitable for use in displaying summary information that covers multiple reports.  For example, this resource has not been designed for laboratory cumulative reporting formats nor detailed structured reports for sequencing.",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A code or name that describes this diagnostic report. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "DiagnosticReport.name",
+                "text": "Name/Code for this diagnostic report",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "DiagnosticReport.name.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/report-names"
+                        }
+                    },
+                    {
+                        "linkId": "DiagnosticReport.name.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The status of the diagnostic report as a whole."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "code"
+                    }
+                ],
+                "linkId": "DiagnosticReport.status",
+                "text": "registered | partial | final | corrected +",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "DiagnosticReport.status.value",
+                        "text": "Status",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/diagnostic-report-status"
+                        }
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The date and/or time that this version of the report was released from the source diagnostic service."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "datetime"
+                    }
+                ],
+                "linkId": "DiagnosticReport.issued",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "DiagnosticReport.issued.value",
+                        "text": "Date this version was released",
+                        "type": "dateTime"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The subject of the report. Usually, but not always, this is a patient. However diagnostic services also perform analyses on specimens collected from a variety of other sources. null"
+                    }
+                ],
+                "linkId": "DiagnosticReport.subject",
+                "text": "The subject of the report, usually, but not always, the patient",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "DiagnosticReport.subject._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs1"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "DiagnosticReport.subject._Patient",
+                                "question": [
+                                    {
+                                        "linkId": "DiagnosticReport.subject._Patient.value",
+                                        "text": "Patient",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Group?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "DiagnosticReport.subject._Group",
+                                "question": [
+                                    {
+                                        "linkId": "DiagnosticReport.subject._Group.value",
+                                        "text": "Group",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Device?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "DiagnosticReport.subject._Device",
+                                "question": [
+                                    {
+                                        "linkId": "DiagnosticReport.subject._Device.value",
+                                        "text": "Device",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Location?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "DiagnosticReport.subject._Location",
+                                "question": [
+                                    {
+                                        "linkId": "DiagnosticReport.subject._Location.value",
+                                        "text": "Location",
+                                        "type": "reference"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The diagnostic service that is responsible for issuing the report."
+                    }
+                ],
+                "linkId": "DiagnosticReport.performer",
+                "text": "Responsible Diagnostic Service",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "DiagnosticReport.performer._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs2"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "DiagnosticReport.performer._Practitioner",
+                                "question": [
+                                    {
+                                        "linkId": "DiagnosticReport.performer._Practitioner.value",
+                                        "text": "Practitioner",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "DiagnosticReport.performer._Organization",
+                                "question": [
+                                    {
+                                        "linkId": "DiagnosticReport.performer._Organization.value",
+                                        "text": "Organization",
+                                        "type": "reference"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The local ID assigned to the report by the order filler, usually by the Information System of the diagnostic service provider. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Identifier"
+                    }
+                ],
+                "linkId": "DiagnosticReport.identifier",
+                "text": "Id for external references to this report",
+                "question": [
+                    {
+                        "linkId": "DiagnosticReport.identifier.label",
+                        "text": "label:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "DiagnosticReport.identifier.system",
+                        "text": "system:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "DiagnosticReport.identifier.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Details concerning a test requested."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/DiagnosticOrder?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "DiagnosticReport.requestDetail",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "DiagnosticReport.requestDetail.value",
+                        "text": "What was requested",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The section of the diagnostic service that performs the examination e.g. biochemistry, hematology, MRI. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "DiagnosticReport.serviceCategory",
+                "text": "Biochemistry, Hematology etc.",
+                "question": [
+                    {
+                        "linkId": "DiagnosticReport.serviceCategory.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/diagnostic-service-sections"
+                        }
+                    },
+                    {
+                        "linkId": "DiagnosticReport.serviceCategory.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The time or time-period the observed values are related to. This is usually either the time of the procedure or of specimen collection(s), but very often the source of the date/time is not known, only the date/time itself."
+                    }
+                ],
+                "linkId": "DiagnosticReport.diagnostic[x]",
+                "text": "Physiologically Relevant time/time-period for report",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "DiagnosticReport.diagnostic[x]._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs3"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "datetime"
+                                    }
+                                ],
+                                "linkId": "DiagnosticReport.diagnostic[x]._dateTime",
+                                "question": [
+                                    {
+                                        "linkId": "DiagnosticReport.diagnostic[x]._dateTime.value",
+                                        "text": "dateTime",
+                                        "type": "dateTime"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "Period"
+                                    }
+                                ],
+                                "linkId": "DiagnosticReport.diagnostic[x]._Period",
+                                "text": "Period",
+                                "question": [
+                                    {
+                                        "linkId": "DiagnosticReport.diagnostic[x]._Period.low",
+                                        "text": "start:",
+                                        "type": "dateTime"
+                                    },
+                                    {
+                                        "linkId": "DiagnosticReport.diagnostic[x]._Period.end",
+                                        "text": "end:",
+                                        "type": "dateTime"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Details about the specimens on which this Disagnostic report is based."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Specimen?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "DiagnosticReport.specimen",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "DiagnosticReport.specimen.value",
+                        "text": "Specimens this report is based on",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Observations that are part of this diagnostic report. Observations can be simple name/value pairs (e.g. \"atomic\" results), or they can be grouping observations that include references to other members of the group (e.g. \"panels\"). null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Observation?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "DiagnosticReport.result",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "DiagnosticReport.result.value",
+                        "text": "Observations - simple, or complex nested groups",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "One or more links to full details of any imaging performed during the diagnostic investigation. Typically, this is imaging performed by DICOM enabled modalities, but this is not required. A fully enabled PACS viewer can use this information to provide views of the source images."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/ImagingStudy?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "DiagnosticReport.imagingStudy",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "DiagnosticReport.imagingStudy.value",
+                        "text": "Reference to full details of imaging associated with the diagnostic report",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest)."
+                    }
+                ],
+                "linkId": "DiagnosticReport.image",
+                "title": "Key images associated with this report",
+                "repeats": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "A comment about the image. Typically, this is used to provide an explanation for why the image is included, or to draw the viewer's attention to important features."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "string"
+                            }
+                        ],
+                        "linkId": "DiagnosticReport.image.comment",
+                        "question": [
+                            {
+                                "linkId": "DiagnosticReport.image.comment.value",
+                                "text": "Comment about the image (e.g. explanation)",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Reference to the image source. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "ResourceReference"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                "valueString": "/Media?subject=$subj&patient=$subj&encounter=$encounter"
+                            }
+                        ],
+                        "linkId": "DiagnosticReport.image.link",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "DiagnosticReport.image.link.value",
+                                "text": "Reference to the image source",
+                                "type": "reference"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Concise and clinically contextualized narrative interpretation of the diagnostic report."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "DiagnosticReport.conclusion",
+                "question": [
+                    {
+                        "linkId": "DiagnosticReport.conclusion.value",
+                        "text": "Clinical Interpretation of test results",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Codes for the conclusion. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "DiagnosticReport.codedDiagnosis",
+                "text": "Codes for the conclusion",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "DiagnosticReport.codedDiagnosis.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/clinical-findings"
+                        }
+                    },
+                    {
+                        "linkId": "DiagnosticReport.codedDiagnosis.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Attachment"
+                    }
+                ],
+                "linkId": "DiagnosticReport.presentedForm",
+                "text": "Entire Report as issued",
+                "repeats": true
+            }
+        ]
+    }
+}

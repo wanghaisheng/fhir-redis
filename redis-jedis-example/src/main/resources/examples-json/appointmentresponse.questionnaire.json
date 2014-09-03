@@ -1,0 +1,349 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: AppointmentResponse</p><p><b>title</b>: A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "contained": [
+        {
+            "resourceType": "ValueSet",
+            "id": "vs1",
+            "name": "Type options for AppointmentResponse.lastModifiedBy",
+            "description": "Type options for AppointmentResponse.lastModifiedBy",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:3405fcf7-2bbb-403c-9039-724c48b0fcae",
+                "concept": [
+                    {
+                        "code": "Practitioner",
+                        "display": "Practitioner"
+                    },
+                    {
+                        "code": "Patient",
+                        "display": "Patient"
+                    },
+                    {
+                        "code": "RelatedPerson",
+                        "display": "RelatedPerson"
+                    }
+                ]
+            }
+        }
+    ],
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection."
+            }
+        ],
+        "linkId": "AppointmentResponse",
+        "title": "A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "This records identifiers associated with this appointment concern that are defined by business processed and/ or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation). null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Identifier"
+                    }
+                ],
+                "linkId": "AppointmentResponse.identifier",
+                "text": "External Ids for this item",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "AppointmentResponse.identifier.label",
+                        "text": "label:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "AppointmentResponse.identifier.system",
+                        "text": "system:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "AppointmentResponse.identifier.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Parent appointment that this response is replying to. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Appointment?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "AppointmentResponse.appointment",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "AppointmentResponse.appointment.value",
+                        "text": "Parent appointment that this response is replying to",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Role of participant in the appointment. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "AppointmentResponse.participantType",
+                "text": "Role of participant in the appointment",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "AppointmentResponse.participantType.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/encounter-participant-type"
+                        }
+                    },
+                    {
+                        "linkId": "AppointmentResponse.participantType.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A Person of device that is participating in the appointment, usually Practitioner, Patient, RelatedPerson or Device."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "AppointmentResponse.individual",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "AppointmentResponse.individual.value",
+                        "text": "A Person of device that is participating in the appointment, usually Practitioner, Patient, RelatedPerson or Device",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Participation status of the Patient. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "code"
+                    }
+                ],
+                "linkId": "AppointmentResponse.participantStatus",
+                "text": "accepted | declined | tentative | in-process | completed | needs-action",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "AppointmentResponse.participantStatus.value",
+                        "text": "Participant Status",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/participantstatus"
+                        }
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Additional comments about the appointment. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "AppointmentResponse.comment",
+                "question": [
+                    {
+                        "linkId": "AppointmentResponse.comment.value",
+                        "text": "Additional comments about the appointment",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Date/Time that the appointment is to take place. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "instant"
+                    }
+                ],
+                "linkId": "AppointmentResponse.start",
+                "question": [
+                    {
+                        "linkId": "AppointmentResponse.start.value",
+                        "text": "Date/Time that the appointment is to take place",
+                        "type": "instant"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Date/Time that the appointment is to conclude. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "instant"
+                    }
+                ],
+                "linkId": "AppointmentResponse.end",
+                "question": [
+                    {
+                        "linkId": "AppointmentResponse.end.value",
+                        "text": "Date/Time that the appointment is to conclude",
+                        "type": "instant"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Who recorded the appointment response. null"
+                    }
+                ],
+                "linkId": "AppointmentResponse.lastModifiedBy",
+                "text": "Who recorded the appointment response",
+                "question": [
+                    {
+                        "linkId": "AppointmentResponse.lastModifiedBy._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs1"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "AppointmentResponse.lastModifiedBy._Practitioner",
+                                "question": [
+                                    {
+                                        "linkId": "AppointmentResponse.lastModifiedBy._Practitioner.value",
+                                        "text": "Practitioner",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "AppointmentResponse.lastModifiedBy._Patient",
+                                "question": [
+                                    {
+                                        "linkId": "AppointmentResponse.lastModifiedBy._Patient.value",
+                                        "text": "Patient",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/RelatedPerson?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "AppointmentResponse.lastModifiedBy._RelatedPerson",
+                                "question": [
+                                    {
+                                        "linkId": "AppointmentResponse.lastModifiedBy._RelatedPerson.value",
+                                        "text": "RelatedPerson",
+                                        "type": "reference"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Date when the response was recorded or last updated. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "datetime"
+                    }
+                ],
+                "linkId": "AppointmentResponse.lastModified",
+                "question": [
+                    {
+                        "linkId": "AppointmentResponse.lastModified.value",
+                        "text": "Date when the response was recorded or last updated",
+                        "type": "dateTime"
+                    }
+                ]
+            }
+        ]
+    }
+}

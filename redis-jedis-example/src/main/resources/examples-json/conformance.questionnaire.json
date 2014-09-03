@@ -1,0 +1,1458 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: Conformance</p><p><b>title</b>: A conformance statement</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "A conformance statement is a set of requirements for a desired implementation or a description of how a target application fulfills those requirements in a particular implementation."
+            }
+        ],
+        "linkId": "Conformance",
+        "title": "A conformance statement",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The identifier that is used to identify this conformance statement when it is referenced in a specification, model, design or an instance (should be globally unique OID, UUID, or URI). null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "Conformance.identifier",
+                "question": [
+                    {
+                        "linkId": "Conformance.identifier.value",
+                        "text": "Logical id to reference this statement",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The identifier that is used to identify this version of the conformance statement when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the profile author manually and the value should be a timestamp."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "Conformance.version",
+                "question": [
+                    {
+                        "linkId": "Conformance.version.value",
+                        "text": "Logical id for this version of the statement",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A free text natural language name identifying the conformance statement."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "Conformance.name",
+                "question": [
+                    {
+                        "linkId": "Conformance.name.value",
+                        "text": "Informal name for this conformance statement",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Name of Organization publishing this conformance statement. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "Conformance.publisher",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "Conformance.publisher.value",
+                        "text": "Publishing Organization",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Contacts for Organization relevant to this conformance statement.  The contacts may be a website, email, phone numbers, etc. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Contact"
+                    }
+                ],
+                "linkId": "Conformance.telecom",
+                "text": "Contacts for Organization",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Conformance.telecom.type",
+                        "text": "type:",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/contact-system"
+                        }
+                    },
+                    {
+                        "linkId": "Conformance.telecom.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A free text natural language description of the conformance statement and its use. Typically, this is used when the profile describes a desired rather than an actual solution, for example as a formal expression of requirements as part of an RFP."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "Conformance.description",
+                "question": [
+                    {
+                        "linkId": "Conformance.description.value",
+                        "text": "Human description of the conformance statement",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The status of this conformance statement."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "code"
+                    }
+                ],
+                "linkId": "Conformance.status",
+                "text": "draft | active | retired",
+                "question": [
+                    {
+                        "linkId": "Conformance.status.value",
+                        "text": "Status",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/conformance-statement-status"
+                        }
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A flag to indicate that this conformance statement is authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "boolean"
+                    }
+                ],
+                "linkId": "Conformance.experimental",
+                "question": [
+                    {
+                        "linkId": "Conformance.experimental.value",
+                        "text": "If for testing purposes, not real usage",
+                        "type": "boolean"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The date when the conformance statement was published. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "datetime"
+                    }
+                ],
+                "linkId": "Conformance.date",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "Conformance.date.value",
+                        "text": "Publication Date",
+                        "type": "dateTime"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Software that is covered by this conformance statement.  It is used when the profile describes the capabilities of a particular software version, independent of an installation."
+                    }
+                ],
+                "linkId": "Conformance.software",
+                "title": "Software that is covered by this conformance statement",
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Name software is known by. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "string"
+                            }
+                        ],
+                        "linkId": "Conformance.software.name",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Conformance.software.name.value",
+                                "text": "A name the software is known by",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "The version identifier for the software covered by this statement."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "string"
+                            }
+                        ],
+                        "linkId": "Conformance.software.version",
+                        "question": [
+                            {
+                                "linkId": "Conformance.software.version.value",
+                                "text": "Version covered by this statement",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Date this version of the software released. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "datetime"
+                            }
+                        ],
+                        "linkId": "Conformance.software.releaseDate",
+                        "question": [
+                            {
+                                "linkId": "Conformance.software.releaseDate.value",
+                                "text": "Date this version released",
+                                "type": "dateTime"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Identifies a specific implementation instance that is described by the conformance statement - i.e. a particular installation, rather than the capabilities of a software program."
+                    }
+                ],
+                "linkId": "Conformance.implementation",
+                "title": "If this describes a specific instance",
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Information about the specific installation that this conformance statement relates to. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "string"
+                            }
+                        ],
+                        "linkId": "Conformance.implementation.description",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Conformance.implementation.description.value",
+                                "text": "Describes this specific instance",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "A base URL for the implementation.  This forms the base for REST interfaces as well as the mailbox and document interfaces. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "uri"
+                            }
+                        ],
+                        "linkId": "Conformance.implementation.url",
+                        "question": [
+                            {
+                                "linkId": "Conformance.implementation.url.value",
+                                "text": "Base URL for the installation",
+                                "type": "string"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The version of the FHIR specification on which this conformance statement is based. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "Conformance.fhirVersion",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "Conformance.fhirVersion.value",
+                        "text": "FHIR Version",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A flag that indicates whether the application accepts unknown elements as part of a resource."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "boolean"
+                    }
+                ],
+                "linkId": "Conformance.acceptUnknown",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "Conformance.acceptUnknown.value",
+                        "text": "True if application accepts unknown elements",
+                        "type": "boolean"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A list of the formats supported by this implementation."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "code"
+                    }
+                ],
+                "linkId": "Conformance.format",
+                "text": "formats supported (xml | json | mime type)",
+                "required": true,
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Conformance.format.value",
+                        "text": "formats supported (xml | json | mime type)",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A list of profiles supported by the system. For a server, \"supported by the system\" means the system hosts/produces a set of recourses, conformant to a particular profile, and allows its clients to search using this profile and to find appropriate data. For a client, it means the system will search by this profile and process data according to the guidance implicit in the profile."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Profile?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "Conformance.profile",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Conformance.profile.value",
+                        "text": "Profiles supported by the system",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A definition of the restful capabilities of the solution, if any."
+                    }
+                ],
+                "linkId": "Conformance.rest",
+                "title": "If the endpoint is a RESTful one",
+                "text": "Multiple repetitions allow definition of both client and / or server behaviors or possibly behaviors under different configuration settings (for software or requirements statements).",
+                "repeats": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Identifies whether this portion of the statement is describing ability to initiate or receive restful operations. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "code"
+                            }
+                        ],
+                        "linkId": "Conformance.rest.mode",
+                        "text": "client | server",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Conformance.rest.mode.value",
+                                "text": "Mode",
+                                "type": "choice",
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/restful-conformance-mode"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Information about the system's restful capabilities that apply across all applications, such as security. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "string"
+                            }
+                        ],
+                        "linkId": "Conformance.rest.documentation",
+                        "question": [
+                            {
+                                "linkId": "Conformance.rest.documentation.value",
+                                "text": "General description of implementation",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Information about security of implementation."
+                            }
+                        ],
+                        "linkId": "Conformance.rest.security",
+                        "title": "Information about security of implementation",
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Server adds CORS headers when responding to requests - this enables javascript applications to yuse the server."
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "boolean"
+                                    }
+                                ],
+                                "linkId": "Conformance.rest.security.cors",
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.rest.security.cors.value",
+                                        "text": "Adds CORS Headers (http://enable-cors.org/)",
+                                        "type": "boolean"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Types of security services are supported/required by the system. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "CodeableConcept"
+                                    }
+                                ],
+                                "linkId": "Conformance.rest.security.service",
+                                "text": "OAuth | OAuth2 | NTLM | Basic | Kerberos",
+                                "repeats": true,
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.rest.security.service.coding",
+                                        "text": "code:",
+                                        "type": "open-choice",
+                                        "repeats": true,
+                                        "options": {
+                                            "reference": "http://hl7.org/fhir/vs/restful-security-service"
+                                        }
+                                    },
+                                    {
+                                        "linkId": "Conformance.rest.security.service.text",
+                                        "text": "text:",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "General description of how security works. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "string"
+                                    }
+                                ],
+                                "linkId": "Conformance.rest.security.description",
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.rest.security.description.value",
+                                        "text": "General description of how security works",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Certificates associated with security profiles."
+                                    }
+                                ],
+                                "linkId": "Conformance.rest.security.certificate",
+                                "title": "Certificates associated with security profiles",
+                                "repeats": true,
+                                "group": [
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                                "valueString": "Mime type for certificate. null"
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "code"
+                                            }
+                                        ],
+                                        "linkId": "Conformance.rest.security.certificate.type",
+                                        "text": "Mime type for certificate",
+                                        "question": [
+                                            {
+                                                "linkId": "Conformance.rest.security.certificate.type.value",
+                                                "text": "Mime type for certificate",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                                "valueString": "Actual certificate. null"
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "binary"
+                                            }
+                                        ],
+                                        "linkId": "Conformance.rest.security.certificate.blob",
+                                        "text": "Actual certificate"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "A specification of the restful capabilities of the solution for a specific resource type."
+                            }
+                        ],
+                        "linkId": "Conformance.rest.resource",
+                        "title": "Resource served on the REST interface",
+                        "text": "Max of one repetition per resource type.",
+                        "required": true,
+                        "repeats": true,
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "A type of resource exposed via the restful interface. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "code"
+                                    }
+                                ],
+                                "linkId": "Conformance.rest.resource.type",
+                                "text": "A resource type that is supported",
+                                "required": true,
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.rest.resource.type.value",
+                                        "text": "Type",
+                                        "type": "choice",
+                                        "options": {
+                                            "reference": "http://hl7.org/fhir/vs/resource-types"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "A specification of the profile that describes the solution's support for the resource, including any constraints on cardinality, bindings, lengths or other limitations."
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Profile?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Conformance.rest.resource.profile",
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.rest.resource.profile.value",
+                                        "text": "What structural features are supported",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Identifies a restful operation supported by the solution."
+                                    }
+                                ],
+                                "linkId": "Conformance.rest.resource.interaction",
+                                "title": "What operations are supported?",
+                                "required": true,
+                                "repeats": true,
+                                "group": [
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                                "valueString": "Coded identifier of the operation, supported by the system resource. null"
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "code"
+                                            }
+                                        ],
+                                        "linkId": "Conformance.rest.resource.interaction.code",
+                                        "text": "read | vread | update | delete | history-instance | validate | history-type | create | search-type",
+                                        "required": true,
+                                        "question": [
+                                            {
+                                                "linkId": "Conformance.rest.resource.interaction.code.value",
+                                                "text": "Code",
+                                                "type": "choice",
+                                                "options": {
+                                                    "reference": "http://hl7.org/fhir/vs/type-restful-interaction"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                                "valueString": "Guidance specific to the implementation of this operation, such as 'delete is a logical delete' or 'updates are only allowed with version id' or 'creates permitted from pre-authorized certificates only'. null"
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "string"
+                                            }
+                                        ],
+                                        "linkId": "Conformance.rest.resource.interaction.documentation",
+                                        "question": [
+                                            {
+                                                "linkId": "Conformance.rest.resource.interaction.documentation.value",
+                                                "text": "Anything special about operation behavior",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "A flag for whether the server is able to return past versions as part of the vRead operation."
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "boolean"
+                                    }
+                                ],
+                                "linkId": "Conformance.rest.resource.readHistory",
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.rest.resource.readHistory.value",
+                                        "text": "Whether vRead can return past versions",
+                                        "type": "boolean"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "A flag to indicate that the server allows the client to create new identities on the server. If the update operation is used (client) or allowed (server) to a new location where a resource doesn't already exist. This means that the server allows the client to create new identities on the server."
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "boolean"
+                                    }
+                                ],
+                                "linkId": "Conformance.rest.resource.updateCreate",
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.rest.resource.updateCreate.value",
+                                        "text": "If allows/uses update to a new location",
+                                        "type": "boolean"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "A list of _include values supported by the server."
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "string"
+                                    }
+                                ],
+                                "linkId": "Conformance.rest.resource.searchInclude",
+                                "repeats": true,
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.rest.resource.searchInclude.value",
+                                        "text": "_include values supported by the server",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Additional search parameters for implementations to support and/or make use of."
+                                    }
+                                ],
+                                "linkId": "Conformance.rest.resource.searchParam",
+                                "title": "Additional search params defined",
+                                "repeats": true,
+                                "group": [
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                                "valueString": "The name of the search parameter used in the interface."
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "string"
+                                            }
+                                        ],
+                                        "linkId": "Conformance.rest.resource.searchParam.name",
+                                        "required": true,
+                                        "question": [
+                                            {
+                                                "linkId": "Conformance.rest.resource.searchParam.name.value",
+                                                "text": "Name of search parameter",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                                "valueString": "A formal reference to where this parameter was first defined, so that a client can be confident of the meaning of the search parameter."
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "uri"
+                                            }
+                                        ],
+                                        "linkId": "Conformance.rest.resource.searchParam.definition",
+                                        "question": [
+                                            {
+                                                "linkId": "Conformance.rest.resource.searchParam.definition.value",
+                                                "text": "Source of definition for parameter",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                                "valueString": "The type of value a search parameter refers to, and how the content is interpreted."
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "code"
+                                            }
+                                        ],
+                                        "linkId": "Conformance.rest.resource.searchParam.type",
+                                        "text": "number | date | string | token | reference | composite | quantity",
+                                        "required": true,
+                                        "question": [
+                                            {
+                                                "linkId": "Conformance.rest.resource.searchParam.type.value",
+                                                "text": "Type",
+                                                "type": "choice",
+                                                "options": {
+                                                    "reference": "http://hl7.org/fhir/vs/search-param-type"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                                "valueString": "This allows documentation of any distinct behaviors about how the search parameter is used.  For example, text matching algorithms. null"
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "string"
+                                            }
+                                        ],
+                                        "linkId": "Conformance.rest.resource.searchParam.documentation",
+                                        "question": [
+                                            {
+                                                "linkId": "Conformance.rest.resource.searchParam.documentation.value",
+                                                "text": "Server-specific usage",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                                "valueString": "Types of resource (if a resource is referenced)."
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "code"
+                                            }
+                                        ],
+                                        "linkId": "Conformance.rest.resource.searchParam.target",
+                                        "text": "Types of resource (if a resource reference)",
+                                        "repeats": true,
+                                        "question": [
+                                            {
+                                                "linkId": "Conformance.rest.resource.searchParam.target.value",
+                                                "text": "Target",
+                                                "type": "choice",
+                                                "options": {
+                                                    "reference": "http://hl7.org/fhir/vs/resource-types"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                                "valueString": "Chained names supported. null"
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "string"
+                                            }
+                                        ],
+                                        "linkId": "Conformance.rest.resource.searchParam.chain",
+                                        "repeats": true,
+                                        "question": [
+                                            {
+                                                "linkId": "Conformance.rest.resource.searchParam.chain.value",
+                                                "text": "Chained names supported",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "A specification of restful operations supported by the system."
+                            }
+                        ],
+                        "linkId": "Conformance.rest.interaction",
+                        "title": "What operations are supported?",
+                        "repeats": true,
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "A coded identifier of the operation, supported by the system. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "code"
+                                    }
+                                ],
+                                "linkId": "Conformance.rest.interaction.code",
+                                "text": "transaction | search-system | history-system",
+                                "required": true,
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.rest.interaction.code.value",
+                                        "text": "Code",
+                                        "type": "choice",
+                                        "options": {
+                                            "reference": "http://hl7.org/fhir/vs/system-restful-interaction"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Guidance specific to the implementation of this operation, such as limitations on the kind of transactions allowed, or information about system wide search is implemented. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "string"
+                                    }
+                                ],
+                                "linkId": "Conformance.rest.interaction.documentation",
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.rest.interaction.documentation.value",
+                                        "text": "Anything special about operation behavior",
+                                        "type": "string"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Definition of an operation or a named query and with it's parameters and their meaning and type."
+                            }
+                        ],
+                        "linkId": "Conformance.rest.operation",
+                        "title": "Definition of an operation or a custom query",
+                        "repeats": true,
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "The name of a query, which is used in the _query parameter when the query is called."
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "string"
+                                    }
+                                ],
+                                "linkId": "Conformance.rest.operation.name",
+                                "required": true,
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.rest.operation.name.value",
+                                        "text": "Name by which the operation/query is invoked",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Where the formal definition can be found."
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/OperationDefinition?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Conformance.rest.operation.definition",
+                                "required": true,
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.rest.operation.definition.value",
+                                        "text": "The the operation/query is defined",
+                                        "type": "reference"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "A list of profiles that this server implements for accepting documents in the mailbox. If this list is empty, then documents are not accepted. The base specification has the profile identifier \"http://hl7.org/fhir/documents/mailbox\". Other specifications can declare their own identifier for this purpose."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "uri"
+                            }
+                        ],
+                        "linkId": "Conformance.rest.documentMailbox",
+                        "repeats": true,
+                        "question": [
+                            {
+                                "linkId": "Conformance.rest.documentMailbox.value",
+                                "text": "How documents are accepted in /Mailbox",
+                                "type": "string"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A description of the messaging capabilities of the solution."
+                    }
+                ],
+                "linkId": "Conformance.messaging",
+                "title": "If messaging is supported",
+                "text": "Multiple repetitions allow the documentation of multiple endpoints per solution.",
+                "repeats": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "An address to which messages and/or replies are to be sent."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "uri"
+                            }
+                        ],
+                        "linkId": "Conformance.messaging.endpoint",
+                        "question": [
+                            {
+                                "linkId": "Conformance.messaging.endpoint.value",
+                                "text": "Actual endpoint being described",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Length if the receiver's reliable messaging cache (if a receiver) or how long the cache length on the receiver should be (if a sender)."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "integer"
+                            }
+                        ],
+                        "linkId": "Conformance.messaging.reliableCache",
+                        "question": [
+                            {
+                                "linkId": "Conformance.messaging.reliableCache.value",
+                                "text": "Reliable Message Cache Length",
+                                "type": "integer"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Documentation about the system's messaging capabilities for this endpoint not otherwise documented by the conformance statement.  For example, process for becoming an authorized messaging exchange partner. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "string"
+                            }
+                        ],
+                        "linkId": "Conformance.messaging.documentation",
+                        "question": [
+                            {
+                                "linkId": "Conformance.messaging.documentation.value",
+                                "text": "Messaging interface behavior details",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "A description of the solution's support for an event at this end point."
+                            }
+                        ],
+                        "linkId": "Conformance.messaging.event",
+                        "title": "Declare support for this event",
+                        "text": "The same event may be listed up to two times - once as sender and once as receiver.",
+                        "required": true,
+                        "repeats": true,
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "A coded identifier of a supported messaging event. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "Coding"
+                                    }
+                                ],
+                                "linkId": "Conformance.messaging.event.code",
+                                "text": "Event type",
+                                "required": true,
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.messaging.event.code.value",
+                                        "text": "Code:",
+                                        "type": "open-choice",
+                                        "options": {
+                                            "reference": "http://hl7.org/fhir/vs/message-events"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "The impact of the content of the message. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "code"
+                                    }
+                                ],
+                                "linkId": "Conformance.messaging.event.category",
+                                "text": "Consequence | Currency | Notification",
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.messaging.event.category.value",
+                                        "text": "Category",
+                                        "type": "choice",
+                                        "options": {
+                                            "reference": "http://hl7.org/fhir/vs/message-significance-category"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "The mode of this event declaration - whether application is sender or receiver. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "code"
+                                    }
+                                ],
+                                "linkId": "Conformance.messaging.event.mode",
+                                "text": "sender | receiver",
+                                "required": true,
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.messaging.event.mode.value",
+                                        "text": "Mode",
+                                        "type": "choice",
+                                        "options": {
+                                            "reference": "http://hl7.org/fhir/vs/message-conformance-event-mode"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "A list of the messaging transport protocol(s) identifiers, supported by this endpoint. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "Coding"
+                                    }
+                                ],
+                                "linkId": "Conformance.messaging.event.protocol",
+                                "text": "http | ftp | mllp +",
+                                "repeats": true,
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.messaging.event.protocol.value",
+                                        "text": "Code:",
+                                        "type": "open-choice",
+                                        "options": {
+                                            "reference": "http://hl7.org/fhir/vs/message-transport"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "A resource associated with the event.  This is the resource that defines the event."
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "code"
+                                    }
+                                ],
+                                "linkId": "Conformance.messaging.event.focus",
+                                "text": "Resource that's focus of message",
+                                "required": true,
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.messaging.event.focus.value",
+                                        "text": "Focus",
+                                        "type": "choice",
+                                        "options": {
+                                            "reference": "http://hl7.org/fhir/vs/resource-types"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Information about the request for this event. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Profile?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Conformance.messaging.event.request",
+                                "required": true,
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.messaging.event.request.value",
+                                        "text": "Profile that describes the request",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Information about the response for this event. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Profile?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Conformance.messaging.event.response",
+                                "required": true,
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.messaging.event.response.value",
+                                        "text": "Profile that describes the response",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Guidance on how this event is handled, such as internal system trigger points, business rules, etc. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "string"
+                                    }
+                                ],
+                                "linkId": "Conformance.messaging.event.documentation",
+                                "question": [
+                                    {
+                                        "linkId": "Conformance.messaging.event.documentation.value",
+                                        "text": "Endpoint-specific event documentation",
+                                        "type": "string"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A document definition."
+                    }
+                ],
+                "linkId": "Conformance.document",
+                "title": "Document definition",
+                "repeats": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Mode of this document declaration - whether application is producer or consumer. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "code"
+                            }
+                        ],
+                        "linkId": "Conformance.document.mode",
+                        "text": "producer | consumer",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Conformance.document.mode.value",
+                                "text": "Mode",
+                                "type": "choice",
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/document-mode"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "A description of how the application supports or uses the specified document profile.  For example, when are documents created, what action is taken with consumed documents, etc. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "string"
+                            }
+                        ],
+                        "linkId": "Conformance.document.documentation",
+                        "question": [
+                            {
+                                "linkId": "Conformance.document.documentation.value",
+                                "text": "Description of document support",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "A constraint on a resource used in the document."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "ResourceReference"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                "valueString": "/Profile?subject=$subj&patient=$subj&encounter=$encounter"
+                            }
+                        ],
+                        "linkId": "Conformance.document.profile",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Conformance.document.profile.value",
+                                "text": "Constraint on a resource used in the document",
+                                "type": "reference"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

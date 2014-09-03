@@ -1,0 +1,326 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: DeviceObservationReport</p><p><b>title</b>: Describes the data produced by a device at a point in time</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "contained": [
+        {
+            "resourceType": "ValueSet",
+            "id": "vs1",
+            "name": "Type options for DeviceObservationReport.subject",
+            "description": "Type options for DeviceObservationReport.subject",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:3a1b68f9-ca1d-4fb2-803c-c8fed186c4bb",
+                "concept": [
+                    {
+                        "code": "Patient",
+                        "display": "Patient"
+                    },
+                    {
+                        "code": "Device",
+                        "display": "Device"
+                    },
+                    {
+                        "code": "Location",
+                        "display": "Location"
+                    }
+                ]
+            }
+        }
+    ],
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "Describes the data produced by a device at a point in time."
+            }
+        ],
+        "linkId": "DeviceObservationReport",
+        "title": "Describes the data produced by a device at a point in time",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The point in time that the values are reported. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "instant"
+                    }
+                ],
+                "linkId": "DeviceObservationReport.instant",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "DeviceObservationReport.instant.value",
+                        "text": "When the data values are reported",
+                        "type": "instant"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "An identifier assigned to this observation bu the source device that made the observation. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Identifier"
+                    }
+                ],
+                "linkId": "DeviceObservationReport.identifier",
+                "text": "As assigned by the source device",
+                "question": [
+                    {
+                        "linkId": "DeviceObservationReport.identifier.label",
+                        "text": "label:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "DeviceObservationReport.identifier.system",
+                        "text": "system:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "DeviceObservationReport.identifier.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Identification information for the device that is the source of the data. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Device?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "DeviceObservationReport.source",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "DeviceObservationReport.source.value",
+                        "text": "Identifies/describes where the data came from",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The subject of the measurement. null"
+                    }
+                ],
+                "linkId": "DeviceObservationReport.subject",
+                "text": "Subject of the measurement",
+                "question": [
+                    {
+                        "linkId": "DeviceObservationReport.subject._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs1"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "DeviceObservationReport.subject._Patient",
+                                "question": [
+                                    {
+                                        "linkId": "DeviceObservationReport.subject._Patient.value",
+                                        "text": "Patient",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Device?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "DeviceObservationReport.subject._Device",
+                                "question": [
+                                    {
+                                        "linkId": "DeviceObservationReport.subject._Device.value",
+                                        "text": "Device",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Location?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "DeviceObservationReport.subject._Location",
+                                "question": [
+                                    {
+                                        "linkId": "DeviceObservationReport.subject._Location.value",
+                                        "text": "Location",
+                                        "type": "reference"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A medical-related subsystem of a medical device."
+                    }
+                ],
+                "linkId": "DeviceObservationReport.virtualDevice",
+                "title": "A medical-related subsystem of a medical device",
+                "repeats": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Describes the compartment. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "DeviceObservationReport.virtualDevice.code",
+                        "text": "Describes the compartment",
+                        "question": [
+                            {
+                                "linkId": "DeviceObservationReport.virtualDevice.code.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true
+                            },
+                            {
+                                "linkId": "DeviceObservationReport.virtualDevice.code.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Groups together physiological measurement data and derived data."
+                            }
+                        ],
+                        "linkId": "DeviceObservationReport.virtualDevice.channel",
+                        "title": "Groups related data items",
+                        "repeats": true,
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Describes the channel. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "CodeableConcept"
+                                    }
+                                ],
+                                "linkId": "DeviceObservationReport.virtualDevice.channel.code",
+                                "text": "Describes the channel",
+                                "question": [
+                                    {
+                                        "linkId": "DeviceObservationReport.virtualDevice.channel.code.coding",
+                                        "text": "code:",
+                                        "type": "open-choice",
+                                        "repeats": true
+                                    },
+                                    {
+                                        "linkId": "DeviceObservationReport.virtualDevice.channel.code.text",
+                                        "text": "text:",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "A piece of measured or derived data that is reported by the machine."
+                                    }
+                                ],
+                                "linkId": "DeviceObservationReport.virtualDevice.channel.metric",
+                                "title": "Piece of data reported by device",
+                                "repeats": true,
+                                "group": [
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                                "valueString": "The data for the metric. null"
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "ResourceReference"
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                                "valueString": "/Observation?subject=$subj&patient=$subj&encounter=$encounter"
+                                            }
+                                        ],
+                                        "linkId": "DeviceObservationReport.virtualDevice.channel.metric.observation",
+                                        "required": true,
+                                        "question": [
+                                            {
+                                                "linkId": "DeviceObservationReport.virtualDevice.channel.metric.observation.value",
+                                                "text": "The data for the metric",
+                                                "type": "reference"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

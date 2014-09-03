@@ -1,0 +1,376 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: AdverseReaction</p><p><b>title</b>: Specific reactions to a substance</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "contained": [
+        {
+            "resourceType": "ValueSet",
+            "id": "vs1",
+            "name": "Type options for AdverseReaction.recorder",
+            "description": "Type options for AdverseReaction.recorder",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:0372f8fd-9c0b-4db5-b103-bf06ed659017",
+                "concept": [
+                    {
+                        "code": "Practitioner",
+                        "display": "Practitioner"
+                    },
+                    {
+                        "code": "Patient",
+                        "display": "Patient"
+                    }
+                ]
+            }
+        }
+    ],
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "Records an unexpected reaction suspected to be related to the exposure of the reaction subject to a substance."
+            }
+        ],
+        "linkId": "AdverseReaction",
+        "title": "Specific reactions to a substance",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "This records identifiers associated with this reaction that are defined by business processed and/ or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation). null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Identifier"
+                    }
+                ],
+                "linkId": "AdverseReaction.identifier",
+                "text": "External Ids for this adverse reaction",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "AdverseReaction.identifier.label",
+                        "text": "label:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "AdverseReaction.identifier.system",
+                        "text": "system:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "AdverseReaction.identifier.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The date (and possibly time) when the reaction began. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "datetime"
+                    }
+                ],
+                "linkId": "AdverseReaction.date",
+                "question": [
+                    {
+                        "linkId": "AdverseReaction.date.value",
+                        "text": "When the reaction occurred",
+                        "type": "dateTime"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The subject of the adverse reaction. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "AdverseReaction.subject",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "AdverseReaction.subject.value",
+                        "text": "Who had the reaction",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "If true, indicates that no reaction occurred."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "boolean"
+                    }
+                ],
+                "linkId": "AdverseReaction.didNotOccurFlag",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "AdverseReaction.didNotOccurFlag.value",
+                        "text": "Indicates lack of reaction",
+                        "type": "boolean"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Identifies the individual responsible for the information in the reaction record. null"
+                    }
+                ],
+                "linkId": "AdverseReaction.recorder",
+                "text": "Who recorded the reaction",
+                "question": [
+                    {
+                        "linkId": "AdverseReaction.recorder._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs1"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "AdverseReaction.recorder._Practitioner",
+                                "question": [
+                                    {
+                                        "linkId": "AdverseReaction.recorder._Practitioner.value",
+                                        "text": "Practitioner",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "AdverseReaction.recorder._Patient",
+                                "question": [
+                                    {
+                                        "linkId": "AdverseReaction.recorder._Patient.value",
+                                        "text": "Patient",
+                                        "type": "reference"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The signs and symptoms that were observed as part of the reaction."
+                    }
+                ],
+                "linkId": "AdverseReaction.symptom",
+                "title": "What was reaction?",
+                "repeats": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Indicates the specific sign or symptom that was observed. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "AdverseReaction.symptom.code",
+                        "text": "E.g. Rash, vomiting",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "AdverseReaction.symptom.code.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true
+                            },
+                            {
+                                "linkId": "AdverseReaction.symptom.code.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "The severity of the sign or symptom. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "code"
+                            }
+                        ],
+                        "linkId": "AdverseReaction.symptom.severity",
+                        "text": "severe | serious | moderate | minor",
+                        "question": [
+                            {
+                                "linkId": "AdverseReaction.symptom.severity.value",
+                                "text": "Severity",
+                                "type": "choice",
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/reactionSeverity"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "An exposure to a substance that preceded a reaction occurrence."
+                    }
+                ],
+                "linkId": "AdverseReaction.exposure",
+                "title": "Suspected substance",
+                "text": "Multiple repetitions are used to indicate multiple potential causes for the reaction.",
+                "repeats": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Identifies the initial date of the exposure that is suspected to be related to the reaction. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "datetime"
+                            }
+                        ],
+                        "linkId": "AdverseReaction.exposure.date",
+                        "question": [
+                            {
+                                "linkId": "AdverseReaction.exposure.date.value",
+                                "text": "When the exposure occurred",
+                                "type": "dateTime"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "The type of exposure: Drug Administration, Immunization, Coincidental. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "code"
+                            }
+                        ],
+                        "linkId": "AdverseReaction.exposure.type",
+                        "text": "drugadmin | immuniz | coincidental",
+                        "question": [
+                            {
+                                "linkId": "AdverseReaction.exposure.type.value",
+                                "text": "Type",
+                                "type": "choice",
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/exposureType"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "A statement of how confident that the recorder was that this exposure caused the reaction. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "code"
+                            }
+                        ],
+                        "linkId": "AdverseReaction.exposure.causalityExpectation",
+                        "text": "likely | unlikely | confirmed | unknown",
+                        "question": [
+                            {
+                                "linkId": "AdverseReaction.exposure.causalityExpectation.value",
+                                "text": "Causality Expectation",
+                                "type": "choice",
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/causalityExpectation"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Substance that is presumed to have caused the adverse reaction. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "ResourceReference"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                "valueString": "/Substance?subject=$subj&patient=$subj&encounter=$encounter"
+                            }
+                        ],
+                        "linkId": "AdverseReaction.exposure.substance",
+                        "question": [
+                            {
+                                "linkId": "AdverseReaction.exposure.substance.value",
+                                "text": "Presumed causative substance",
+                                "type": "reference"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

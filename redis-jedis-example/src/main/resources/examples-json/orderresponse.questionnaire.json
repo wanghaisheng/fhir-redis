@@ -1,0 +1,364 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: OrderResponse</p><p><b>title</b>: A response to an order</p><p><b>text</b>: There might be more than one response to an order.</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "contained": [
+        {
+            "resourceType": "ValueSet",
+            "id": "vs1",
+            "name": "Type options for OrderResponse.who",
+            "description": "Type options for OrderResponse.who",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:d921177f-e3dc-4cdc-b73e-3f54a2bab68d",
+                "concept": [
+                    {
+                        "code": "Practitioner",
+                        "display": "Practitioner"
+                    },
+                    {
+                        "code": "Organization",
+                        "display": "Organization"
+                    },
+                    {
+                        "code": "Device",
+                        "display": "Device"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "ValueSet",
+            "id": "vs2",
+            "name": "Type options for OrderResponse.authority[x]",
+            "description": "Type options for OrderResponse.authority[x]",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:4c855d7c-6000-4ae8-8242-5d65680ae04a",
+                "concept": [
+                    {
+                        "code": "CodeableConcept",
+                        "display": "CodeableConcept"
+                    },
+                    {
+                        "code": "Any",
+                        "display": "Any"
+                    }
+                ]
+            }
+        }
+    ],
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "A response to an order."
+            }
+        ],
+        "linkId": "OrderResponse",
+        "title": "A response to an order",
+        "text": "There might be more than one response to an order.",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Identifiers assigned to this order. The identifiers are usually assigned by the system responding to the order, but they may be provided or added to by other systems. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Identifier"
+                    }
+                ],
+                "linkId": "OrderResponse.identifier",
+                "text": "Identifiers assigned to this order by the orderer or by the receiver",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "OrderResponse.identifier.label",
+                        "text": "label:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "OrderResponse.identifier.system",
+                        "text": "system:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "OrderResponse.identifier.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A reference to the order that this is in response to. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Order?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "OrderResponse.request",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "OrderResponse.request.value",
+                        "text": "The order that this is a response to",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The date and time at which this order response was made (created/posted). null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "datetime"
+                    }
+                ],
+                "linkId": "OrderResponse.date",
+                "question": [
+                    {
+                        "linkId": "OrderResponse.date.value",
+                        "text": "When the response was made",
+                        "type": "dateTime"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The person, organization, or device credited with making the response. null"
+                    }
+                ],
+                "linkId": "OrderResponse.who",
+                "text": "Who made the response",
+                "question": [
+                    {
+                        "linkId": "OrderResponse.who._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs1"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "OrderResponse.who._Practitioner",
+                                "question": [
+                                    {
+                                        "linkId": "OrderResponse.who._Practitioner.value",
+                                        "text": "Practitioner",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "OrderResponse.who._Organization",
+                                "question": [
+                                    {
+                                        "linkId": "OrderResponse.who._Organization.value",
+                                        "text": "Organization",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Device?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "OrderResponse.who._Device",
+                                "question": [
+                                    {
+                                        "linkId": "OrderResponse.who._Device.value",
+                                        "text": "Device",
+                                        "type": "reference"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A reference to an authority policy that is the reason for the response. Usually this is used when the order is rejected, to provide a reason for rejection."
+                    }
+                ],
+                "linkId": "OrderResponse.authority[x]",
+                "text": "If required by policy",
+                "question": [
+                    {
+                        "linkId": "OrderResponse.authority[x]._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs2"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "CodeableConcept"
+                                    }
+                                ],
+                                "linkId": "OrderResponse.authority[x]._CodeableConcept",
+                                "text": "CodeableConcept",
+                                "question": [
+                                    {
+                                        "linkId": "OrderResponse.authority[x]._CodeableConcept.coding",
+                                        "text": "code:",
+                                        "type": "open-choice",
+                                        "repeats": true
+                                    },
+                                    {
+                                        "linkId": "OrderResponse.authority[x]._CodeableConcept.text",
+                                        "text": "text:",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "OrderResponse.authority[x]._Any",
+                                "question": [
+                                    {
+                                        "linkId": "OrderResponse.authority[x]._Any.value",
+                                        "text": "Any",
+                                        "type": "reference"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "What this response says about the status of the original order. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "code"
+                    }
+                ],
+                "linkId": "OrderResponse.code",
+                "text": "pending | review | rejected | error | accepted | cancelled | replaced | aborted | complete",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "OrderResponse.code.value",
+                        "text": "Code",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/order-outcome-code"
+                        }
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Additional description about the response - e.g. a text description provided by a human user when making decisions about the order. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "OrderResponse.description",
+                "question": [
+                    {
+                        "linkId": "OrderResponse.description.value",
+                        "text": "Additional description of the response",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Links to resources that provide details of the outcome of performing the order. E.g. Diagnostic Reports in a response that is made to an order that referenced a diagnostic order. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "OrderResponse.fulfillment",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "OrderResponse.fulfillment.value",
+                        "text": "Details of the outcome of performing the order",
+                        "type": "reference"
+                    }
+                ]
+            }
+        ]
+    }
+}

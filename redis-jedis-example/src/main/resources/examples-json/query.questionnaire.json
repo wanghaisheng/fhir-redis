@@ -1,0 +1,214 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: Query</p><p><b>title</b>: A description of a query with a set of parameters</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "A description of a query with a set of parameters."
+            }
+        ],
+        "linkId": "Query",
+        "title": "A description of a query with a set of parameters",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Links query and its response(s). null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "uri"
+                    }
+                ],
+                "linkId": "Query.identifier",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "Query.identifier.value",
+                        "text": "Links query and its response(s)",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Set of query parameters with values."
+                    }
+                ],
+                "linkId": "Query.parameter",
+                "text": "Set of query parameters with values",
+                "required": true,
+                "repeats": true
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "If this is a response to a query."
+                    }
+                ],
+                "linkId": "Query.response",
+                "title": "If this is a response to a query",
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Links response to source query. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "uri"
+                            }
+                        ],
+                        "linkId": "Query.response.identifier",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Query.response.identifier.value",
+                                "text": "Links response to source query",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Outcome of processing the query. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "code"
+                            }
+                        ],
+                        "linkId": "Query.response.outcome",
+                        "text": "ok | limited | refused | error",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Query.response.outcome.value",
+                                "text": "Outcome",
+                                "type": "choice",
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/query-outcome"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Total number of matching records. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "integer"
+                            }
+                        ],
+                        "linkId": "Query.response.total",
+                        "question": [
+                            {
+                                "linkId": "Query.response.total.value",
+                                "text": "Total number of matching records",
+                                "type": "integer"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Parameters server used. null"
+                            }
+                        ],
+                        "linkId": "Query.response.parameter",
+                        "text": "Parameters server used",
+                        "repeats": true
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "To get first page (if paged). null"
+                            }
+                        ],
+                        "linkId": "Query.response.first",
+                        "text": "To get first page (if paged)",
+                        "repeats": true
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "To get previous page (if paged). null"
+                            }
+                        ],
+                        "linkId": "Query.response.previous",
+                        "text": "To get previous page (if paged)",
+                        "repeats": true
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "To get next page (if paged). null"
+                            }
+                        ],
+                        "linkId": "Query.response.next",
+                        "text": "To get next page (if paged)",
+                        "repeats": true
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "To get last page (if paged). null"
+                            }
+                        ],
+                        "linkId": "Query.response.last",
+                        "text": "To get last page (if paged)",
+                        "repeats": true
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Resources that are the results of the search."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "ResourceReference"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                            }
+                        ],
+                        "linkId": "Query.response.reference",
+                        "repeats": true,
+                        "question": [
+                            {
+                                "linkId": "Query.response.reference.value",
+                                "text": "Resources that are the results of the search",
+                                "type": "reference"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

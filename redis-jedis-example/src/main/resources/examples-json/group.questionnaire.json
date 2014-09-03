@@ -1,0 +1,533 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: Group</p><p><b>title</b>: Group of multiple entities</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "contained": [
+        {
+            "resourceType": "ValueSet",
+            "id": "vs1",
+            "name": "Type options for Group.characteristic.value[x]",
+            "description": "Type options for Group.characteristic.value[x]",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:ad2bc01e-3f1e-4c3b-b836-37df376266be",
+                "concept": [
+                    {
+                        "code": "CodeableConcept",
+                        "display": "CodeableConcept"
+                    },
+                    {
+                        "code": "boolean",
+                        "display": "boolean"
+                    },
+                    {
+                        "code": "Quantity",
+                        "display": "Quantity"
+                    },
+                    {
+                        "code": "Range",
+                        "display": "Range"
+                    }
+                ]
+            }
+        },
+        {
+            "resourceType": "ValueSet",
+            "id": "vs2",
+            "name": "Type options for Group.member",
+            "description": "Type options for Group.member",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:a2709597-e604-4242-a634-b1b067db8374",
+                "concept": [
+                    {
+                        "code": "Patient",
+                        "display": "Patient"
+                    },
+                    {
+                        "code": "Practitioner",
+                        "display": "Practitioner"
+                    },
+                    {
+                        "code": "Device",
+                        "display": "Device"
+                    },
+                    {
+                        "code": "Medication",
+                        "display": "Medication"
+                    },
+                    {
+                        "code": "Substance",
+                        "display": "Substance"
+                    }
+                ]
+            }
+        }
+    ],
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "Represents a defined collection of entities that may be discussed or acted upon collectively but which are not expected to act collectively and are not formally or legally recognized.  I.e. A collection of entities that isn't an Organization."
+            }
+        ],
+        "linkId": "Group",
+        "title": "Group of multiple entities",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A unique business identifier for this group. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Identifier"
+                    }
+                ],
+                "linkId": "Group.identifier",
+                "text": "Unique id",
+                "question": [
+                    {
+                        "linkId": "Group.identifier.label",
+                        "text": "label:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Group.identifier.system",
+                        "text": "system:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Group.identifier.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Identifies the broad classification of the kind of resources the group includes. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "code"
+                    }
+                ],
+                "linkId": "Group.type",
+                "text": "person | animal | practitioner | device | medication | substance",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "Group.type.value",
+                        "text": "Type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/group-type"
+                        }
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "If true, indicates that the resource refers to a specific group of real individuals.  If false, the group defines a set of intended individuals. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "boolean"
+                    }
+                ],
+                "linkId": "Group.actual",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "Group.actual.value",
+                        "text": "Descriptive or actual",
+                        "type": "boolean"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Provides a specific type of resource the group includes.  E.g. \"cow\", \"syringe\", etc."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "Group.code",
+                "text": "Kind of Group members",
+                "question": [
+                    {
+                        "linkId": "Group.code.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true
+                    },
+                    {
+                        "linkId": "Group.code.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A label assigned to the group for human identification and communication. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "Group.name",
+                "question": [
+                    {
+                        "linkId": "Group.name.value",
+                        "text": "Label for Group",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A count of the number of resource instances that are part of the group. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "integer"
+                    }
+                ],
+                "linkId": "Group.quantity",
+                "question": [
+                    {
+                        "linkId": "Group.quantity.value",
+                        "text": "Number of members",
+                        "type": "integer"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Identifies the traits shared by members of the group."
+                    }
+                ],
+                "linkId": "Group.characteristic",
+                "title": "Trait of group members",
+                "repeats": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "A code that identifies the kind of trait being asserted. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "Group.characteristic.code",
+                        "text": "Kind of characteristic",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Group.characteristic.code.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true
+                            },
+                            {
+                                "linkId": "Group.characteristic.code.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "The value of the trait that holds (or does not hold - see 'exclude') for members of the group."
+                            }
+                        ],
+                        "linkId": "Group.characteristic.value[x]",
+                        "text": "Value held by characteristic",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Group.characteristic.value[x]._type",
+                                "text": "type",
+                                "type": "choice",
+                                "options": {
+                                    "reference": "#vs1"
+                                },
+                                "group": [
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "CodeableConcept"
+                                            }
+                                        ],
+                                        "linkId": "Group.characteristic.value[x]._CodeableConcept",
+                                        "text": "CodeableConcept",
+                                        "question": [
+                                            {
+                                                "linkId": "Group.characteristic.value[x]._CodeableConcept.coding",
+                                                "text": "code:",
+                                                "type": "open-choice",
+                                                "repeats": true
+                                            },
+                                            {
+                                                "linkId": "Group.characteristic.value[x]._CodeableConcept.text",
+                                                "text": "text:",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "boolean"
+                                            }
+                                        ],
+                                        "linkId": "Group.characteristic.value[x]._boolean",
+                                        "question": [
+                                            {
+                                                "linkId": "Group.characteristic.value[x]._boolean.value",
+                                                "text": "boolean",
+                                                "type": "boolean"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "Quantity"
+                                            }
+                                        ],
+                                        "linkId": "Group.characteristic.value[x]._Quantity",
+                                        "text": "Quantity",
+                                        "question": [
+                                            {
+                                                "linkId": "Group.characteristic.value[x]._Quantity.comparator",
+                                                "text": "comp:",
+                                                "type": "choice",
+                                                "options": {
+                                                    "reference": "http://hl7.org/fhir/vs/quantity-comparator"
+                                                }
+                                            },
+                                            {
+                                                "linkId": "Group.characteristic.value[x]._Quantity.value",
+                                                "text": "value:",
+                                                "type": "decimal"
+                                            },
+                                            {
+                                                "linkId": "Group.characteristic.value[x]._Quantity.units",
+                                                "text": "units:",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "Range"
+                                            }
+                                        ],
+                                        "linkId": "Group.characteristic.value[x]._Range",
+                                        "text": "Range",
+                                        "question": [
+                                            {
+                                                "linkId": "Group.characteristic.value[x]._Range.low",
+                                                "text": "low:",
+                                                "type": "decimal"
+                                            },
+                                            {
+                                                "linkId": "Group.characteristic.value[x]._Range.high",
+                                                "text": "high:",
+                                                "type": "decimal"
+                                            },
+                                            {
+                                                "linkId": "Group.characteristic.value[x]._Range.units",
+                                                "text": "units:",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "If true, indicates the characteristic is one that is NOT held by members of the group."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "boolean"
+                            }
+                        ],
+                        "linkId": "Group.characteristic.exclude",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Group.characteristic.exclude.value",
+                                "text": "Group includes or excludes",
+                                "type": "boolean"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Identifies the resource instances that are members of the group. null"
+                    }
+                ],
+                "linkId": "Group.member",
+                "text": "Who is in group",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Group.member._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs2"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Group.member._Patient",
+                                "question": [
+                                    {
+                                        "linkId": "Group.member._Patient.value",
+                                        "text": "Patient",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Group.member._Practitioner",
+                                "question": [
+                                    {
+                                        "linkId": "Group.member._Practitioner.value",
+                                        "text": "Practitioner",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Device?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Group.member._Device",
+                                "question": [
+                                    {
+                                        "linkId": "Group.member._Device.value",
+                                        "text": "Device",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Medication?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Group.member._Medication",
+                                "question": [
+                                    {
+                                        "linkId": "Group.member._Medication.value",
+                                        "text": "Medication",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Substance?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Group.member._Substance",
+                                "question": [
+                                    {
+                                        "linkId": "Group.member._Substance.value",
+                                        "text": "Substance",
+                                        "type": "reference"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

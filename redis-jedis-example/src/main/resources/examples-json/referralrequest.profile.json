@@ -1,0 +1,757 @@
+{
+    "resourceType": "Profile",
+    "text": {
+        "status": "generated",
+        "div": "<div><table style=\"border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;\" cellpadding=\"0\" border=\"0\" cellspacing=\"0\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><th style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Name</th><th style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Card.</th><th style=\"width: 100px\" class=\"heirarchy\">Type</th><th style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Description &amp; Constraints</th></tr><tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJBSURBVDjLhdKxa5NBGMfx713yvkmbJnaoFiSF4mJTh06Kg4OgiyCCRXCof4YIdXdxFhQVHPo3OFSoUx0FySQttaVKYq2NbdO8ed/L3fM4JG3tYPvAcfBw9+HHPWdUlf/V0tLSqKo+EpEHInJFRIohhDUR+RBCeDM7O7ua55QSkRfVanVufHyckZERrLV0Op2Zra2tmXq9fg+YsmcAdyYnJykUCke9OI6ZmJgghHAZ4KwE3ntPs9mkVCohIjQaDWq1GiEEAM5KoHEcY62lVCrRarUoFotUKpUjIL/y/uqXYmV62ph/LSVrr30P4bEFcM4B0Ov1jk547/uAUTs1ceNdZIwB7V/GGHz6+9LXxY96eDiEgHMOY8xJAK8p4grZz5cElwNbwZgyxYu3EFM01lriOCZJEqIoIooiALIsGwA9Y1UcwcWoKNLdpLu9zvbnBWqNBhuvn5EDUmB0EH/1E2TZw5U+YLQovkun+Ytsaw1xCbnCOap334LC7s4Oe/ttvA+ICLmhMXRxDufczUECS37oAuevPwUEVFFp4/eXkXSdYc2IopSepnjtUh5/wg9gfn6+OQBUNaRIUkfDHhraSLoBKqikIF3yHJDLHaAkFOLciVHnyVAVj/S2Ub/XRyQD9aAZKgkaOohvo6ENgykcA07VEFDfQv1uf4W9Y8y30bCPhg4qKZJtMnjTPqBO/vhkZ7h3EJeRslWNQMqgY2jIAIfa/m5sIKSpqpPsGEiz599e3b+GchtD+bSvjQJm2SG6cNj6C+QmaxAek5tyAAAAAElFTkSuQmCC\"/> <span title=\"Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organisation.\">ReferralRequest</span><a name=\"ReferralRequest\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"resources.html\">Resource</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">A request for referral or tranfer of care</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The workflow status of the referral or transfer of care request.\">status</span><a name=\"ReferralRequest.status\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">draft | sent | active | cancelled | refused | completed<br/><a title=\"The status of the referral\" href=\"referralstatus.html\">ReferralStatus</a> (<a title=\"One of the the defined codes must be used\" href=\"terminologies.html#code\">Required</a>)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"Business Id that uniquely identifies the referral/care transfer request instance.\">identifier</span><a name=\"ReferralRequest.identifier\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Identifier of request</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"An indication of the type of referral (or where applicable the type of transfer of care) request.\">type</span><a name=\"ReferralRequest.type\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Referral/Transition of care request type</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"Indication of the clinical domain or discipline to which the referral or transfer of care request is sent.\">specialty</span><a name=\"ReferralRequest.specialty\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">The clinical specialty (discipline) that the referral is requested for</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"An indication of the urgency of referral (or where applicable the type of transfer of care) request.\">priority</span><a name=\"ReferralRequest.priority\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Urgency of referral / transfer of care request</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC\"/> <span title=\"The patient who is the subject of a referral or transfer of care request.\">subject</span><a name=\"ReferralRequest.subject\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"patient.html\">Patient</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Patient/subject of referral or care transfer request</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC\"/> <span title=\"The healthcare provider or provider organization who/which initaited the referral/transfer of care request. Can also be  Patient (a self referral).\">requester</span><a name=\"ReferralRequest.requester\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"practitioner.html\">Practitioner</a> | <a href=\"organization.html\">Organization</a> | <a href=\"patient.html\">Patient</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Requester of referral / transfer of care</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC\"/> <span title=\"The healthcare provider(s) or provider organization(s) who/which is to receive the referral/transfer of care request.\">recipient</span><a name=\"ReferralRequest.recipient\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"practitioner.html\">Practitioner</a> | <a href=\"organization.html\">Organization</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Receiver of referral / transfer of care request</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC\"/> <span title=\"The encounter at which the request for referral or transfer of care is initiated.\">encounter</span><a name=\"ReferralRequest.encounter\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"encounter.html\">Encounter</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Encounter</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"Date/DateTime the request for referral or transfer of care is sent by the author.\">dateSent</span><a name=\"ReferralRequest.dateSent\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Date referral/transfer of care request is sent</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"Description of clinical condition indicating why referral/transfer of care is requested.\">reason</span><a name=\"ReferralRequest.reason\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Reason for referral / Transfer of care request</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The reason gives a short description of why the referral is being made, the description expands on this to support a more complete clinical summary.\">description</span><a name=\"ReferralRequest.description\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">A textual description of the referral</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"The service(s) that is/are requested to be provided to the patient.\">serviceRequested</span><a name=\"ReferralRequest.serviceRequested\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Service(s) requested</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC\"/> <span title=\"Any additional (administrative, financial or clinical) information required to support request for referral or transfer of care.\">supportingInformation</span><a name=\"ReferralRequest.supportingInformation\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"resourcelist.html\">Any</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Additonal information to support referral or transfer of care request</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAD0lEQVR42mP4TzJgIF0LANmXY523xFiMAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII=\"/><img style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"The period of time within which the services identified in the referral/transfer of care is specified or required to occur.\">fulfillmentTime</span><a name=\"ReferralRequest.fulfillmentTime\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#Period\">Period</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Requested service(s) fulfillment time</td></tr>\r\n</table></div>"
+    },
+    "url": "http://hl7.org/fhir/Profile/ReferralRequest",
+    "name": "ReferralRequest",
+    "publisher": "HL7 FHIR Standard",
+    "telecom": [
+        {
+            "system": "url",
+            "value": "http://hl7.org/fhir"
+        }
+    ],
+    "description": "Base Profile for ReferralRequest Resource",
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "structure": [
+        {
+            "type": "ReferralRequest",
+            "publish": true,
+            "purpose": "This is the definition for the ReferralRequest resource",
+            "snapshot": {
+                "element": [
+                    {
+                        "path": "ReferralRequest",
+                        "definition": {
+                            "short": "A request for referral or tranfer of care",
+                            "formal": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organisation.",
+                            "min": 1,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "Resource"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.extension",
+                        "definition": {
+                            "short": "Additional Content defined by implementations",
+                            "formal": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+                            "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                            "synonym": [
+                                "extensions",
+                                "user content"
+                            ],
+                            "min": 0,
+                            "max": "*",
+                            "type": [
+                                {
+                                    "code": "Extension"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.modifierExtension",
+                        "definition": {
+                            "short": "Extensions that cannot be ignored",
+                            "formal": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+                            "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                            "synonym": [
+                                "extensions",
+                                "user content"
+                            ],
+                            "min": 0,
+                            "max": "*",
+                            "type": [
+                                {
+                                    "code": "Extension"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.language",
+                        "definition": {
+                            "short": "Language of the resource content",
+                            "formal": "The base language in which the resource is written.",
+                            "comments": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "code"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.text",
+                        "definition": {
+                            "short": "Text summary of the resource, for human interpretation",
+                            "formal": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+                            "comments": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.",
+                            "synonym": [
+                                "narrative",
+                                "html",
+                                "xhtml",
+                                "display"
+                            ],
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "Narrative"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.contained",
+                        "definition": {
+                            "short": "Contained, inline Resources",
+                            "formal": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+                            "comments": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+                            "synonym": [
+                                "inline resources",
+                                "anonymous resources",
+                                "contained resources"
+                            ],
+                            "min": 0,
+                            "max": "*",
+                            "type": [
+                                {
+                                    "code": "Resource"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.status",
+                        "definition": {
+                            "short": "draft | sent | active | cancelled | refused | completed",
+                            "formal": "The workflow status of the referral or transfer of care request.",
+                            "min": 1,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "code"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false,
+                            "binding": {
+                                "name": "ReferralStatus",
+                                "isExtensible": false,
+                                "conformance": "required",
+                                "description": "The status of the referral",
+                                "referenceResource": {
+                                    "reference": "http://hl7.org/fhir/vs/referralstatus"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.identifier",
+                        "definition": {
+                            "short": "Identifier of request",
+                            "formal": "Business Id that uniquely identifies the referral/care transfer request instance.",
+                            "min": 0,
+                            "max": "*",
+                            "type": [
+                                {
+                                    "code": "Identifier"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.type",
+                        "definition": {
+                            "short": "Referral/Transition of care request type",
+                            "formal": "An indication of the type of referral (or where applicable the type of transfer of care) request.",
+                            "comments": "Examples of referral type:\r- consultation; \r       second opinion; \r        third opinion\r- Assume management\r- Request for procedure(s)\r\rHL7 v2.8 Example - Table 0336:\rS = second opinion\rp = patient preference\ro = provider ordered\rw = work load.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "CodeableConcept"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.specialty",
+                        "definition": {
+                            "short": "The clinical specialty (discipline) that the referral is requested for",
+                            "formal": "Indication of the clinical domain or discipline to which the referral or transfer of care request is sent.",
+                            "comments": "Examples:\rCardiology\rGastroenterology\rDiabetology.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "CodeableConcept"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.priority",
+                        "definition": {
+                            "short": "Urgency of referral / transfer of care request",
+                            "formal": "An indication of the urgency of referral (or where applicable the type of transfer of care) request.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "CodeableConcept"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.subject",
+                        "definition": {
+                            "short": "Patient/subject of referral or care transfer request",
+                            "formal": "The patient who is the subject of a referral or transfer of care request.",
+                            "comments": "Referral of family, group or community is to be catered for by profiles.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "ResourceReference",
+                                    "profile": "http://hl7.org/fhir/Profile/Patient"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.requester",
+                        "definition": {
+                            "short": "Requester of referral / transfer of care",
+                            "formal": "The healthcare provider or provider organization who/which initaited the referral/transfer of care request. Can also be  Patient (a self referral).",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "ResourceReference",
+                                    "profile": "http://hl7.org/fhir/Profile/Practitioner"
+                                },
+                                {
+                                    "code": "ResourceReference",
+                                    "profile": "http://hl7.org/fhir/Profile/Organization"
+                                },
+                                {
+                                    "code": "ResourceReference",
+                                    "profile": "http://hl7.org/fhir/Profile/Patient"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.recipient",
+                        "definition": {
+                            "short": "Receiver of referral / transfer of care request",
+                            "formal": "The healthcare provider(s) or provider organization(s) who/which is to receive the referral/transfer of care request.",
+                            "comments": "There will be a primary receiver.\rBut the request can be received by any number of \"copied to\" providers or organisations.",
+                            "min": 0,
+                            "max": "*",
+                            "type": [
+                                {
+                                    "code": "ResourceReference",
+                                    "profile": "http://hl7.org/fhir/Profile/Practitioner"
+                                },
+                                {
+                                    "code": "ResourceReference",
+                                    "profile": "http://hl7.org/fhir/Profile/Organization"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.encounter",
+                        "definition": {
+                            "short": "Encounter",
+                            "formal": "The encounter at which the request for referral or transfer of care is initiated.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "ResourceReference",
+                                    "profile": "http://hl7.org/fhir/Profile/Encounter"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.dateSent",
+                        "definition": {
+                            "short": "Date referral/transfer of care request is sent",
+                            "formal": "Date/DateTime the request for referral or transfer of care is sent by the author.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "dateTime"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.reason",
+                        "definition": {
+                            "short": "Reason for referral / Transfer of care request",
+                            "formal": "Description of clinical condition indicating why referral/transfer of care is requested.",
+                            "comments": "Examples:\r\"2nd degree AV block\"\r\rOral Health example ReferralReasonCode:\r01 = Pathological Anomalies\r02 = Disabled (physical or mental)\r03 = Complexity of Treatment\r04 = Seizure Disorders\r05 = Extensive Surgery\r06 = Surgical Complexity\r07 = Rampant decay\r08 = Medical History (to provide details upon request)\r09 = Temporal Mandibular Joint Anomalies\r10 = Accidental Injury\r11 = Anaesthesia complications (local or general)\r12 = Developmental Anomalies\r13 = Behavioral Management.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "CodeableConcept"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.description",
+                        "definition": {
+                            "short": "A textual description of the referral",
+                            "formal": "The reason gives a short description of why the referral is being made, the description expands on this to support a more complete clinical summary.",
+                            "comments": "This would be a good candidate for a 'markdown' data type.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "string"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.serviceRequested",
+                        "definition": {
+                            "short": "Service(s) requested",
+                            "formal": "The service(s) that is/are requested to be provided to the patient.",
+                            "comments": "Examples:\r\"cardiac pacemaker insertion\"\r\rHL7 v3 Concept domain - ReferralReasonCode examples:\r- Specialized medical assistance\r- Other care requirement.",
+                            "min": 0,
+                            "max": "*",
+                            "type": [
+                                {
+                                    "code": "CodeableConcept"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.supportingInformation",
+                        "definition": {
+                            "short": "Additonal information to support referral or transfer of care request",
+                            "formal": "Any additional (administrative, financial or clinical) information required to support request for referral or transfer of care.",
+                            "comments": "Examples include:\rPresenting problems/chief complaints\rMedical History\rFamily History\rAlerts\rAllergy/Intolerance and Adverse Reactions\rMedications\rObservations/Assessments (may include cognitive and fundtional assessments)\rDiagnostic Reports\rCare Plan.",
+                            "min": 0,
+                            "max": "*",
+                            "type": [
+                                {
+                                    "code": "ResourceReference",
+                                    "profile": "http://hl7.org/fhir/Profile/Any"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.fulfillmentTime",
+                        "definition": {
+                            "short": "Requested service(s) fulfillment time",
+                            "formal": "The period of time within which the services identified in the referral/transfer of care is specified or required to occur.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "Period"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    }
+                ]
+            },
+            "differential": {
+                "element": [
+                    {
+                        "path": "ReferralRequest",
+                        "definition": {
+                            "short": "A request for referral or tranfer of care",
+                            "formal": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organisation.",
+                            "min": 1,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "Resource"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.status",
+                        "definition": {
+                            "short": "draft | sent | active | cancelled | refused | completed",
+                            "formal": "The workflow status of the referral or transfer of care request.",
+                            "min": 1,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "code"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false,
+                            "binding": {
+                                "name": "ReferralStatus",
+                                "isExtensible": false,
+                                "conformance": "required",
+                                "description": "The status of the referral",
+                                "referenceResource": {
+                                    "reference": "http://hl7.org/fhir/vs/referralstatus"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.identifier",
+                        "definition": {
+                            "short": "Identifier of request",
+                            "formal": "Business Id that uniquely identifies the referral/care transfer request instance.",
+                            "min": 0,
+                            "max": "*",
+                            "type": [
+                                {
+                                    "code": "Identifier"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.type",
+                        "definition": {
+                            "short": "Referral/Transition of care request type",
+                            "formal": "An indication of the type of referral (or where applicable the type of transfer of care) request.",
+                            "comments": "Examples of referral type:\r- consultation; \r       second opinion; \r        third opinion\r- Assume management\r- Request for procedure(s)\r\rHL7 v2.8 Example - Table 0336:\rS = second opinion\rp = patient preference\ro = provider ordered\rw = work load.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "CodeableConcept"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.specialty",
+                        "definition": {
+                            "short": "The clinical specialty (discipline) that the referral is requested for",
+                            "formal": "Indication of the clinical domain or discipline to which the referral or transfer of care request is sent.",
+                            "comments": "Examples:\rCardiology\rGastroenterology\rDiabetology.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "CodeableConcept"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.priority",
+                        "definition": {
+                            "short": "Urgency of referral / transfer of care request",
+                            "formal": "An indication of the urgency of referral (or where applicable the type of transfer of care) request.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "CodeableConcept"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.subject",
+                        "definition": {
+                            "short": "Patient/subject of referral or care transfer request",
+                            "formal": "The patient who is the subject of a referral or transfer of care request.",
+                            "comments": "Referral of family, group or community is to be catered for by profiles.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "ResourceReference",
+                                    "profile": "http://hl7.org/fhir/Profile/Patient"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.requester",
+                        "definition": {
+                            "short": "Requester of referral / transfer of care",
+                            "formal": "The healthcare provider or provider organization who/which initaited the referral/transfer of care request. Can also be  Patient (a self referral).",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "ResourceReference",
+                                    "profile": "http://hl7.org/fhir/Profile/Practitioner"
+                                },
+                                {
+                                    "code": "ResourceReference",
+                                    "profile": "http://hl7.org/fhir/Profile/Organization"
+                                },
+                                {
+                                    "code": "ResourceReference",
+                                    "profile": "http://hl7.org/fhir/Profile/Patient"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.recipient",
+                        "definition": {
+                            "short": "Receiver of referral / transfer of care request",
+                            "formal": "The healthcare provider(s) or provider organization(s) who/which is to receive the referral/transfer of care request.",
+                            "comments": "There will be a primary receiver.\rBut the request can be received by any number of \"copied to\" providers or organisations.",
+                            "min": 0,
+                            "max": "*",
+                            "type": [
+                                {
+                                    "code": "ResourceReference",
+                                    "profile": "http://hl7.org/fhir/Profile/Practitioner"
+                                },
+                                {
+                                    "code": "ResourceReference",
+                                    "profile": "http://hl7.org/fhir/Profile/Organization"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.encounter",
+                        "definition": {
+                            "short": "Encounter",
+                            "formal": "The encounter at which the request for referral or transfer of care is initiated.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "ResourceReference",
+                                    "profile": "http://hl7.org/fhir/Profile/Encounter"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.dateSent",
+                        "definition": {
+                            "short": "Date referral/transfer of care request is sent",
+                            "formal": "Date/DateTime the request for referral or transfer of care is sent by the author.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "dateTime"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.reason",
+                        "definition": {
+                            "short": "Reason for referral / Transfer of care request",
+                            "formal": "Description of clinical condition indicating why referral/transfer of care is requested.",
+                            "comments": "Examples:\r\"2nd degree AV block\"\r\rOral Health example ReferralReasonCode:\r01 = Pathological Anomalies\r02 = Disabled (physical or mental)\r03 = Complexity of Treatment\r04 = Seizure Disorders\r05 = Extensive Surgery\r06 = Surgical Complexity\r07 = Rampant decay\r08 = Medical History (to provide details upon request)\r09 = Temporal Mandibular Joint Anomalies\r10 = Accidental Injury\r11 = Anaesthesia complications (local or general)\r12 = Developmental Anomalies\r13 = Behavioral Management.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "CodeableConcept"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.description",
+                        "definition": {
+                            "short": "A textual description of the referral",
+                            "formal": "The reason gives a short description of why the referral is being made, the description expands on this to support a more complete clinical summary.",
+                            "comments": "This would be a good candidate for a 'markdown' data type.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "string"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.serviceRequested",
+                        "definition": {
+                            "short": "Service(s) requested",
+                            "formal": "The service(s) that is/are requested to be provided to the patient.",
+                            "comments": "Examples:\r\"cardiac pacemaker insertion\"\r\rHL7 v3 Concept domain - ReferralReasonCode examples:\r- Specialized medical assistance\r- Other care requirement.",
+                            "min": 0,
+                            "max": "*",
+                            "type": [
+                                {
+                                    "code": "CodeableConcept"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.supportingInformation",
+                        "definition": {
+                            "short": "Additonal information to support referral or transfer of care request",
+                            "formal": "Any additional (administrative, financial or clinical) information required to support request for referral or transfer of care.",
+                            "comments": "Examples include:\rPresenting problems/chief complaints\rMedical History\rFamily History\rAlerts\rAllergy/Intolerance and Adverse Reactions\rMedications\rObservations/Assessments (may include cognitive and fundtional assessments)\rDiagnostic Reports\rCare Plan.",
+                            "min": 0,
+                            "max": "*",
+                            "type": [
+                                {
+                                    "code": "ResourceReference",
+                                    "profile": "http://hl7.org/fhir/Profile/Any"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    },
+                    {
+                        "path": "ReferralRequest.fulfillmentTime",
+                        "definition": {
+                            "short": "Requested service(s) fulfillment time",
+                            "formal": "The period of time within which the services identified in the referral/transfer of care is specified or required to occur.",
+                            "min": 0,
+                            "max": "1",
+                            "type": [
+                                {
+                                    "code": "Period"
+                                }
+                            ],
+                            "mustSupport": false,
+                            "isModifier": false
+                        }
+                    }
+                ]
+            },
+            "searchParam": [
+                {
+                    "name": "_id",
+                    "type": "token",
+                    "documentation": "The logical resource id associated with the resource (must be supported by all servers)"
+                },
+                {
+                    "name": "_language",
+                    "type": "token",
+                    "documentation": "The stated language of the resource",
+                    "xpath": "f:language"
+                },
+                {
+                    "name": "priority",
+                    "type": "token",
+                    "documentation": "The priority assigned to the referral",
+                    "xpath": "f:ReferralRequest/f:priority"
+                },
+                {
+                    "name": "recipient",
+                    "type": "reference",
+                    "documentation": "The person that the referral was sent to",
+                    "xpath": "f:ReferralRequest/f:recipient"
+                },
+                {
+                    "name": "specialty",
+                    "type": "token",
+                    "documentation": "The specialty that the referral is for",
+                    "xpath": "f:ReferralRequest/f:specialty"
+                },
+                {
+                    "name": "status",
+                    "type": "token",
+                    "documentation": "The status of the referral",
+                    "xpath": "f:ReferralRequest/f:status"
+                },
+                {
+                    "name": "subject",
+                    "type": "reference",
+                    "documentation": "Who the referral is about",
+                    "xpath": "f:ReferralRequest/f:subject"
+                },
+                {
+                    "name": "type",
+                    "type": "token",
+                    "documentation": "The type of the referral",
+                    "xpath": "f:ReferralRequest/f:type"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,402 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: Location</p><p><b>title</b>: Details and position information for a physical place</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "Details and position information for a physical place where services are provided  and resources and participants may be stored, found, contained or accommodated."
+            }
+        ],
+        "linkId": "Location",
+        "title": "Details and position information for a physical place",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Unique code or number identifying the location to its users. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Identifier"
+                    }
+                ],
+                "linkId": "Location.identifier",
+                "text": "Unique code or number identifying the location to its users",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Location.identifier.label",
+                        "text": "label:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Location.identifier.system",
+                        "text": "system:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Location.identifier.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Name of the location as used by humans. Does not need to be unique. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "Location.name",
+                "question": [
+                    {
+                        "linkId": "Location.name.value",
+                        "text": "Name of the location as used by humans",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Description of the Location, which helps in finding or referencing the place. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "Location.description",
+                "question": [
+                    {
+                        "linkId": "Location.description.value",
+                        "text": "Description of the Location, which helps in finding or referencing the place",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Indicates the type of function performed at the location. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "Location.type",
+                "text": "Indicates the type of function performed at the location",
+                "question": [
+                    {
+                        "linkId": "Location.type.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/v3/vs/ServiceDeliveryLocationRoleType"
+                        }
+                    },
+                    {
+                        "linkId": "Location.type.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Contact"
+                    }
+                ],
+                "linkId": "Location.telecom",
+                "text": "Contact details of the location",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Location.telecom.type",
+                        "text": "type:",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/contact-system"
+                        }
+                    },
+                    {
+                        "linkId": "Location.telecom.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Physical location."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Address"
+                    }
+                ],
+                "linkId": "Location.address",
+                "text": "Physical location",
+                "question": [
+                    {
+                        "linkId": "Location.address.text",
+                        "text": "text:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Location.address.line",
+                        "text": "line:",
+                        "type": "string",
+                        "repeats": true
+                    },
+                    {
+                        "linkId": "Location.address.city",
+                        "text": "city:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Location.address.state",
+                        "text": "state:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Location.address.zip",
+                        "text": "zip:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Location.address.country",
+                        "text": "country:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Physical form of the location, e.g. building, room, vehicle, road. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "Location.physicalType",
+                "text": "Physical form of the location",
+                "question": [
+                    {
+                        "linkId": "Location.physicalType.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/location-physical-type"
+                        }
+                    },
+                    {
+                        "linkId": "Location.physicalType.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The absolute geographic location of the Location, expressed in a KML compatible manner (see notes below for KML)."
+                    }
+                ],
+                "linkId": "Location.position",
+                "title": "The absolute geographic location",
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below). null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "decimal"
+                            }
+                        ],
+                        "linkId": "Location.position.longitude",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Location.position.longitude.value",
+                                "text": "Longitude as expressed in KML",
+                                "type": "decimal"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below). null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "decimal"
+                            }
+                        ],
+                        "linkId": "Location.position.latitude",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Location.position.latitude.value",
+                                "text": "Latitude as expressed in KML",
+                                "type": "decimal"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below). null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "decimal"
+                            }
+                        ],
+                        "linkId": "Location.position.altitude",
+                        "question": [
+                            {
+                                "linkId": "Location.position.altitude.value",
+                                "text": "Altitude as expressed in KML",
+                                "type": "decimal"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The organization that is responsible for the provisioning and upkeep of the location. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "Location.managingOrganization",
+                "question": [
+                    {
+                        "linkId": "Location.managingOrganization.value",
+                        "text": "The organization that is responsible for the provisioning and upkeep of the location",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "active | suspended | inactive. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "code"
+                    }
+                ],
+                "linkId": "Location.status",
+                "text": "active | suspended | inactive",
+                "question": [
+                    {
+                        "linkId": "Location.status.value",
+                        "text": "Status",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/location-status"
+                        }
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Another Location which this Location is physically part of. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Location?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "Location.partOf",
+                "question": [
+                    {
+                        "linkId": "Location.partOf.value",
+                        "text": "Another Location which this Location is physically part of",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Indicates whether a resource instance represents a specific location or a class of locations. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "code"
+                    }
+                ],
+                "linkId": "Location.mode",
+                "text": "instance | kind",
+                "question": [
+                    {
+                        "linkId": "Location.mode.value",
+                        "text": "Mode",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/location-mode"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

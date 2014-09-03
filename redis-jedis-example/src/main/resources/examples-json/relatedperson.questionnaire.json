@@ -1,0 +1,259 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: RelatedPerson</p><p><b>title</b>: An person that is related to a patient, but who is not a direct target of care</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process."
+            }
+        ],
+        "linkId": "RelatedPerson",
+        "title": "An person that is related to a patient, but who is not a direct target of care",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Identifier for a person within a particular scope. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Identifier"
+                    }
+                ],
+                "linkId": "RelatedPerson.identifier",
+                "text": "A Human identifier for this person",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "RelatedPerson.identifier.label",
+                        "text": "label:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "RelatedPerson.identifier.system",
+                        "text": "system:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "RelatedPerson.identifier.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The patient this person is related to. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "RelatedPerson.patient",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "RelatedPerson.patient.value",
+                        "text": "The patient this person is related to",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The nature of the relationship between a patient and the related person. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "RelatedPerson.relationship",
+                "text": "The nature of the relationship",
+                "question": [
+                    {
+                        "linkId": "RelatedPerson.relationship.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/relatedperson-relationshiptype"
+                        }
+                    },
+                    {
+                        "linkId": "RelatedPerson.relationship.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A name associated with the person. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Name"
+                    }
+                ],
+                "linkId": "RelatedPerson.name",
+                "text": "A name associated with the person",
+                "question": [
+                    {
+                        "linkId": "RelatedPerson.name.text",
+                        "text": "text:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "RelatedPerson.name.family",
+                        "text": "family:",
+                        "type": "string",
+                        "repeats": true
+                    },
+                    {
+                        "linkId": "RelatedPerson.name.given",
+                        "text": "given:",
+                        "type": "string",
+                        "repeats": true
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A contact detail for the person, e.g. a telephone number or an email address."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Contact"
+                    }
+                ],
+                "linkId": "RelatedPerson.telecom",
+                "text": "A contact detail for the person",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "RelatedPerson.telecom.type",
+                        "text": "type:",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/contact-system"
+                        }
+                    },
+                    {
+                        "linkId": "RelatedPerson.telecom.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "code"
+                    }
+                ],
+                "linkId": "RelatedPerson.gender",
+                "text": "male | female | other | unknown",
+                "question": [
+                    {
+                        "linkId": "RelatedPerson.gender.value",
+                        "text": "Gender",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/administrative-gender"
+                        }
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Address where the related person can be contacted or visited. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Address"
+                    }
+                ],
+                "linkId": "RelatedPerson.address",
+                "text": "Address where the related person can be contacted or visited",
+                "question": [
+                    {
+                        "linkId": "RelatedPerson.address.text",
+                        "text": "text:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "RelatedPerson.address.line",
+                        "text": "line:",
+                        "type": "string",
+                        "repeats": true
+                    },
+                    {
+                        "linkId": "RelatedPerson.address.city",
+                        "text": "city:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "RelatedPerson.address.state",
+                        "text": "state:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "RelatedPerson.address.zip",
+                        "text": "zip:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "RelatedPerson.address.country",
+                        "text": "country:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Image of the person. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Attachment"
+                    }
+                ],
+                "linkId": "RelatedPerson.photo",
+                "text": "Image of the person",
+                "repeats": true
+            }
+        ]
+    }
+}

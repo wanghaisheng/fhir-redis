@@ -1,0 +1,29 @@
+{"resourceType": "Observation", "text": {
+    "status": "generated",
+    "div": "<div>\n      <p>\n        <b>Generated Narrative with Details</b>\n      </p>\n      <p>\n        <b>name</b>: Weight Measured \n        <span style=\"background: LightGoldenRodYellow \">(Details : {LOINC code '3141-9' = 'Body weight Measured', given as 'Weight Measured'}; {SNOMED CT code '27113001' = 'Body weight (observable entity)', given as 'Body weight'}; {http://acme.org/devices/clinical-codes code 'body-weight' = 'body-weight', given as 'Body Weight'})</span>\n      </p>\n      <p>\n        <b>value</b>: 185 lbs\n        <span style=\"background: LightGoldenRodYellow \"> (Details: http://unitsofmeasure.org code [lb_av] = '[lb_av]')</span>\n      </p>\n      <p>\n        <b>status</b>: final_\n      </p>\n      <p>\n        <b>reliability</b>: ok\n      </p>\n      <p>\n        <b>subject</b>: \n        <a href=\"Patient/example\">Patient/example</a>\n      </p>\n    </div>"
+}, "name": {
+    "coding": [
+        {
+            "system": "http://loinc.org",
+            "code": "3141-9",
+            "display": "Weight Measured"
+        },
+        {
+            "system": "http://snomed.info/sct",
+            "code": "27113001",
+            "display": "Body weight"
+        },
+        {
+            "system": "http://acme.org/devices/clinical-codes",
+            "code": "body-weight",
+            "display": "Body Weight"
+        }
+    ]
+}, "valueQuantity": {
+    "value": 185,
+    "units": "lbs",
+    "system": "http://unitsofmeasure.org",
+    "code": "[lb_av]"
+}, "status": "final", "reliability": "ok", "subject": {
+    "reference": "Patient/example"
+}}

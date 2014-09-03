@@ -1,0 +1,240 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: Substance</p><p><b>title</b>: A homogeneous material with a definite composition</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "A homogeneous material with a definite composition."
+            }
+        ],
+        "linkId": "Substance",
+        "title": "A homogeneous material with a definite composition",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A code (or set of codes) that identify this substance."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "Substance.type",
+                "text": "What kind of substance this is",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "Substance.type.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/substance-type"
+                        }
+                    },
+                    {
+                        "linkId": "Substance.type.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A description of the substance - its appearance, handling requirements, and other usage notes. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "Substance.description",
+                "question": [
+                    {
+                        "linkId": "Substance.description.value",
+                        "text": "Textual description of the substance, comments",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Substance may be used to describe a kind of substance, or a specific package/container of the substance: an instance."
+                    }
+                ],
+                "linkId": "Substance.instance",
+                "title": "If this describes a specific package/container of the substance",
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Identifier associated with the package/container (usually a label affixed directly). null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "Identifier"
+                            }
+                        ],
+                        "linkId": "Substance.instance.identifier",
+                        "text": "Identifier of the package/container",
+                        "question": [
+                            {
+                                "linkId": "Substance.instance.identifier.label",
+                                "text": "label:",
+                                "type": "string"
+                            },
+                            {
+                                "linkId": "Substance.instance.identifier.system",
+                                "text": "system:",
+                                "type": "string"
+                            },
+                            {
+                                "linkId": "Substance.instance.identifier.value",
+                                "text": "value:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "When the substance is no longer valid to use. For some substances, a single arbitrary date is used for expiry. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "datetime"
+                            }
+                        ],
+                        "linkId": "Substance.instance.expiry",
+                        "question": [
+                            {
+                                "linkId": "Substance.instance.expiry.value",
+                                "text": "When no longer valid to use",
+                                "type": "dateTime"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "The amount of the substance. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "Quantity"
+                            }
+                        ],
+                        "linkId": "Substance.instance.quantity",
+                        "text": "Amount of substance in the package",
+                        "question": [
+                            {
+                                "linkId": "Substance.instance.quantity.comparator",
+                                "text": "comp:",
+                                "type": "choice",
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/quantity-comparator"
+                                }
+                            },
+                            {
+                                "linkId": "Substance.instance.quantity.value",
+                                "text": "value:",
+                                "type": "decimal"
+                            },
+                            {
+                                "linkId": "Substance.instance.quantity.units",
+                                "text": "units:",
+                                "type": "string"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A substance can be composed of other substances."
+                    }
+                ],
+                "linkId": "Substance.ingredient",
+                "title": "Composition information about the substance",
+                "repeats": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "The amount of the ingredient in the substance - a concentration ratio. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "Ratio"
+                            }
+                        ],
+                        "linkId": "Substance.ingredient.quantity",
+                        "text": "Optional amount (concentration)",
+                        "question": [
+                            {
+                                "linkId": "Substance.ingredient.quantity.numerator",
+                                "text": "numerator:",
+                                "type": "decimal"
+                            },
+                            {
+                                "linkId": "Substance.ingredient.quantity.denominator",
+                                "text": "denominator:",
+                                "type": "decimal"
+                            },
+                            {
+                                "linkId": "Substance.ingredient.quantity.units",
+                                "text": "units:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Another substance that is a component of this substance. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "ResourceReference"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                "valueString": "/Substance?subject=$subj&patient=$subj&encounter=$encounter"
+                            }
+                        ],
+                        "linkId": "Substance.ingredient.substance",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Substance.ingredient.substance.value",
+                                "text": "A component of the substance",
+                                "type": "reference"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

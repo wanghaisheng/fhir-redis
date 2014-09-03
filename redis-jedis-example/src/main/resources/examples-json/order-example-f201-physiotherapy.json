@@ -1,0 +1,28 @@
+{"resourceType": "Order", "text": {
+    "status": "generated",
+    "div": "<div>\n      <p>\n        <b>Generated Narrative with Details</b>\n      </p>\n      <p>\n        <b>date</b>: 5-Mar 2013 12:0\n      </p>\n      <p>\n        <b>subject</b>: \n        <a href=\"Patient/f201\">Roel</a>\n      </p>\n      <p>\n        <b>source</b>: \n        <a href=\"Practitioner/f201\">Practitioner/f201</a>\n      </p>\n      <p>\n        <b>target</b>: \n        <a href=\"Practitioner/f203\">Juri van Gelder</a>\n      </p>\n      <p>\n        <b>reason</b>: It concerns a one-off order for consultation in order to evaluate the stairs walking ability of Roel. \n        <span style=\"background: LightGoldenRodYellow \">(Details )</span>\n      </p>\n      <h3>Whens</h3>\n      <table class=\"grid\">\n        <tr>\n          <td>\n            <b>Code</b>\n          </td>\n          <td>\n            <b>Schedule</b>\n          </td>\n        </tr>\n        <tr>\n          <td>Normal priority \n            <span style=\"background: LightGoldenRodYellow \">(Details : {SNOMED CT code '394848005' = 'Normal priority', given as 'Normal priority'})</span>\n          </td>\n          <td> </td>\n        </tr>\n      </table>\n      <p>\n        <b>detail</b>: Consultation, not yet developed\n      </p>\n    </div>"
+}, "date": "2013-03-05T12:00:00+01:00", "subject": {
+    "reference": "Patient/f201",
+    "display": "Roel"
+}, "source": {
+    "reference": "Practitioner/f201"
+}, "target": {
+    "reference": "Practitioner/f203",
+    "display": "Juri van Gelder"
+}, "reasonCodeableConcept": {
+    "text": "It concerns a one-off order for consultation in order to evaluate the stairs walking ability of Roel."
+}, "when": {
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "394848005",
+                "display": "Normal priority"
+            }
+        ]
+    }
+}, "detail": [
+    {
+        "display": "Consultation, not yet developed"
+    }
+]}

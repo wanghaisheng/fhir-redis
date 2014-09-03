@@ -1,0 +1,37 @@
+{
+    "resourceType": "ValueSet",
+    "text": {
+        "status": "generated",
+        "div": "<div><h2>OperationKind</h2><p>Whether an operation is a normal operation or a query</p><p>This value set defines its own terms in the system http://hl7.org/fhir/operation-kind</p><table><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>operation<a name=\"operation\"> </a></td><td/><td>This operation is invoked as an operation.</td></tr><tr><td>query<a name=\"query\"> </a></td><td/><td>This operation is a named query, invoked using the search mechanism.</td></tr></table></div>"
+    },
+    "identifier": "http://hl7.org/fhir/vs/operation-kind",
+    "name": "OperationKind",
+    "publisher": "HL7 (FHIR Project)",
+    "telecom": [
+        {
+            "system": "url",
+            "value": "http://hl7.org/fhir"
+        },
+        {
+            "system": "email",
+            "value": "fhir@lists.hl7.org"
+        }
+    ],
+    "description": "Whether an operation is a normal operation or a query",
+    "status": "draft",
+    "date": "2014-09-02T05:51:36.449-00:00",
+    "define": {
+        "system": "http://hl7.org/fhir/operation-kind",
+        "caseSensitive": true,
+        "concept": [
+            {
+                "code": "operation",
+                "definition": "This operation is invoked as an operation."
+            },
+            {
+                "code": "query",
+                "definition": "This operation is a named query, invoked using the search mechanism."
+            }
+        ]
+    }
+}

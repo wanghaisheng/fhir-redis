@@ -1,0 +1,936 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: Encounter</p><p><b>title</b>: An interaction during which services are provided to the patient</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "contained": [
+        {
+            "resourceType": "ValueSet",
+            "id": "vs1",
+            "name": "Type options for Encounter.participant.individual",
+            "description": "Type options for Encounter.participant.individual",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:597a0989-ab67-4b2d-a1fb-acfb3830bb5e",
+                "concept": [
+                    {
+                        "code": "Practitioner",
+                        "display": "Practitioner"
+                    },
+                    {
+                        "code": "RelatedPerson",
+                        "display": "RelatedPerson"
+                    }
+                ]
+            }
+        }
+    ],
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient."
+            }
+        ],
+        "linkId": "Encounter",
+        "title": "An interaction during which services are provided to the patient",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Identifier(s) by which this encounter is known. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Identifier"
+                    }
+                ],
+                "linkId": "Encounter.identifier",
+                "text": "Identifier(s) by which this encounter is known",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Encounter.identifier.label",
+                        "text": "label:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Encounter.identifier.system",
+                        "text": "system:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "Encounter.identifier.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "planned | in progress | onleave | finished | cancelled. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "code"
+                    }
+                ],
+                "linkId": "Encounter.status",
+                "text": "planned | in progress | onleave | finished | cancelled",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "Encounter.status.value",
+                        "text": "Status",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/encounter-state"
+                        }
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "inpatient | outpatient | ambulatory | emergency +. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "code"
+                    }
+                ],
+                "linkId": "Encounter.class",
+                "text": "inpatient | outpatient | ambulatory | emergency +",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "Encounter.class.value",
+                        "text": "Class",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/encounter-class"
+                        }
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation)."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "Encounter.type",
+                "text": "Specific type of encounter",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "Encounter.type.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/encounter-type"
+                        }
+                    },
+                    {
+                        "linkId": "Encounter.type.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The patient present at the encounter."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "Encounter.subject",
+                "question": [
+                    {
+                        "linkId": "Encounter.subject.value",
+                        "text": "The patient present at the encounter",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The main practitioner responsible for providing the service."
+                    }
+                ],
+                "linkId": "Encounter.participant",
+                "title": "List of participants involved in the encounter",
+                "repeats": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Role of participant in encounter. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "Encounter.participant.type",
+                        "text": "Role of participant in encounter",
+                        "repeats": true,
+                        "question": [
+                            {
+                                "linkId": "Encounter.participant.type.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true,
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/encounter-participant-type"
+                                }
+                            },
+                            {
+                                "linkId": "Encounter.participant.type.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Persons involved in the encounter other than the patient. null"
+                            }
+                        ],
+                        "linkId": "Encounter.participant.individual",
+                        "text": "Persons involved in the encounter other than the patient",
+                        "question": [
+                            {
+                                "linkId": "Encounter.participant.individual._type",
+                                "text": "type",
+                                "type": "choice",
+                                "options": {
+                                    "reference": "#vs1"
+                                },
+                                "group": [
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "ResourceReference"
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                                "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                                            }
+                                        ],
+                                        "linkId": "Encounter.participant.individual._Practitioner",
+                                        "question": [
+                                            {
+                                                "linkId": "Encounter.participant.individual._Practitioner.value",
+                                                "text": "Practitioner",
+                                                "type": "reference"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "ResourceReference"
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                                "valueString": "/RelatedPerson?subject=$subj&patient=$subj&encounter=$encounter"
+                                            }
+                                        ],
+                                        "linkId": "Encounter.participant.individual._RelatedPerson",
+                                        "question": [
+                                            {
+                                                "linkId": "Encounter.participant.individual._RelatedPerson.value",
+                                                "text": "RelatedPerson",
+                                                "type": "reference"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The appointment that scheduled this encounter. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Appointment?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "Encounter.fulfills",
+                "question": [
+                    {
+                        "linkId": "Encounter.fulfills.value",
+                        "text": "The appointment that scheduled this encounter",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The start and end time of the encounter."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Period"
+                    }
+                ],
+                "linkId": "Encounter.period",
+                "text": "The start and end time of the encounter",
+                "question": [
+                    {
+                        "linkId": "Encounter.period.low",
+                        "text": "start:",
+                        "type": "dateTime"
+                    },
+                    {
+                        "linkId": "Encounter.period.end",
+                        "text": "end:",
+                        "type": "dateTime"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Quantity of time the encounter lasted. This excludes the time during leaves of absence."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Duration"
+                    }
+                ],
+                "linkId": "Encounter.length",
+                "text": "Quantity of time the encounter lasted",
+                "question": [
+                    {
+                        "linkId": "Encounter.length.value",
+                        "text": "value:",
+                        "type": "decimal"
+                    },
+                    {
+                        "linkId": "Encounter.length.units",
+                        "text": "units:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Reason the encounter takes place, expressed as a code. For admissions, this can be used for a coded admission diagnosis. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "Encounter.reason",
+                "text": "Reason the encounter takes place (code)",
+                "question": [
+                    {
+                        "linkId": "Encounter.reason.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/encounter-reason"
+                        }
+                    },
+                    {
+                        "linkId": "Encounter.reason.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Reason the encounter takes place, as specified using information from another resource. For admissions, this is the admission diagnosis. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "Encounter.indication",
+                "question": [
+                    {
+                        "linkId": "Encounter.indication.value",
+                        "text": "Reason the encounter takes place (resource)",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Indicates the urgency of the encounter. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "CodeableConcept"
+                    }
+                ],
+                "linkId": "Encounter.priority",
+                "text": "Indicates the urgency of the encounter",
+                "question": [
+                    {
+                        "linkId": "Encounter.priority.coding",
+                        "text": "code:",
+                        "type": "open-choice",
+                        "repeats": true,
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/encounter-priority"
+                        }
+                    },
+                    {
+                        "linkId": "Encounter.priority.text",
+                        "text": "text:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Details about an admission to a clinic."
+                    }
+                ],
+                "linkId": "Encounter.hospitalization",
+                "title": "Details about an admission to a clinic",
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Pre-admission identifier. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "Identifier"
+                            }
+                        ],
+                        "linkId": "Encounter.hospitalization.preAdmissionIdentifier",
+                        "text": "Pre-admission identifier",
+                        "question": [
+                            {
+                                "linkId": "Encounter.hospitalization.preAdmissionIdentifier.label",
+                                "text": "label:",
+                                "type": "string"
+                            },
+                            {
+                                "linkId": "Encounter.hospitalization.preAdmissionIdentifier.system",
+                                "text": "system:",
+                                "type": "string"
+                            },
+                            {
+                                "linkId": "Encounter.hospitalization.preAdmissionIdentifier.value",
+                                "text": "value:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "The location from which the patient came before admission. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "ResourceReference"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                "valueString": "/Location?subject=$subj&patient=$subj&encounter=$encounter"
+                            }
+                        ],
+                        "linkId": "Encounter.hospitalization.origin",
+                        "question": [
+                            {
+                                "linkId": "Encounter.hospitalization.origin.value",
+                                "text": "The location from which the patient came before admission",
+                                "type": "reference"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "From where patient was admitted (physician referral, transfer). null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "Encounter.hospitalization.admitSource",
+                        "text": "From where patient was admitted (physician referral, transfer)",
+                        "question": [
+                            {
+                                "linkId": "Encounter.hospitalization.admitSource.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true,
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/encounter-admit-source"
+                                }
+                            },
+                            {
+                                "linkId": "Encounter.hospitalization.admitSource.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Period during which the patient was admitted."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "Period"
+                            }
+                        ],
+                        "linkId": "Encounter.hospitalization.period",
+                        "text": "Period during which the patient was admitted",
+                        "question": [
+                            {
+                                "linkId": "Encounter.hospitalization.period.low",
+                                "text": "start:",
+                                "type": "dateTime"
+                            },
+                            {
+                                "linkId": "Encounter.hospitalization.period.end",
+                                "text": "end:",
+                                "type": "dateTime"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Where the patient stays during this encounter."
+                            }
+                        ],
+                        "linkId": "Encounter.hospitalization.accomodation",
+                        "title": "Where the patient stays during this encounter",
+                        "repeats": true,
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "The bed that is assigned to the patient. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Location?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "Encounter.hospitalization.accomodation.bed",
+                                "question": [
+                                    {
+                                        "linkId": "Encounter.hospitalization.accomodation.bed.value",
+                                        "text": "The bed that is assigned to the patient",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Period during which the patient was assigned the bed. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "Period"
+                                    }
+                                ],
+                                "linkId": "Encounter.hospitalization.accomodation.period",
+                                "text": "Period during which the patient was assigned the bed",
+                                "question": [
+                                    {
+                                        "linkId": "Encounter.hospitalization.accomodation.period.low",
+                                        "text": "start:",
+                                        "type": "dateTime"
+                                    },
+                                    {
+                                        "linkId": "Encounter.hospitalization.accomodation.period.end",
+                                        "text": "end:",
+                                        "type": "dateTime"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Dietary restrictions for the patient. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "Encounter.hospitalization.diet",
+                        "text": "Dietary restrictions for the patient",
+                        "question": [
+                            {
+                                "linkId": "Encounter.hospitalization.diet.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true,
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/encounter-diet"
+                                }
+                            },
+                            {
+                                "linkId": "Encounter.hospitalization.diet.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Special courtesies (VIP, board member). null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "Encounter.hospitalization.specialCourtesy",
+                        "text": "Special courtesies (VIP, board member)",
+                        "repeats": true,
+                        "question": [
+                            {
+                                "linkId": "Encounter.hospitalization.specialCourtesy.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true,
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/encounter-special-courtesy"
+                                }
+                            },
+                            {
+                                "linkId": "Encounter.hospitalization.specialCourtesy.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Wheelchair, translator, stretcher, etc. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "Encounter.hospitalization.specialArrangement",
+                        "text": "Wheelchair, translator, stretcher, etc",
+                        "repeats": true,
+                        "question": [
+                            {
+                                "linkId": "Encounter.hospitalization.specialArrangement.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true,
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/encounter-special-arrangements"
+                                }
+                            },
+                            {
+                                "linkId": "Encounter.hospitalization.specialArrangement.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Location to which the patient is discharged. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "ResourceReference"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                "valueString": "/Location?subject=$subj&patient=$subj&encounter=$encounter"
+                            }
+                        ],
+                        "linkId": "Encounter.hospitalization.destination",
+                        "question": [
+                            {
+                                "linkId": "Encounter.hospitalization.destination.value",
+                                "text": "Location to which the patient is discharged",
+                                "type": "reference"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Category or kind of location after discharge. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "CodeableConcept"
+                            }
+                        ],
+                        "linkId": "Encounter.hospitalization.dischargeDisposition",
+                        "text": "Category or kind of location after discharge",
+                        "question": [
+                            {
+                                "linkId": "Encounter.hospitalization.dischargeDisposition.coding",
+                                "text": "code:",
+                                "type": "open-choice",
+                                "repeats": true,
+                                "options": {
+                                    "reference": "http://hl7.org/fhir/vs/encounter-discharge-disposition"
+                                }
+                            },
+                            {
+                                "linkId": "Encounter.hospitalization.dischargeDisposition.text",
+                                "text": "text:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "The final diagnosis given a patient before release from the hospital after all testing, surgery, and workup are complete. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "ResourceReference"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                            }
+                        ],
+                        "linkId": "Encounter.hospitalization.dischargeDiagnosis",
+                        "question": [
+                            {
+                                "linkId": "Encounter.hospitalization.dischargeDiagnosis.value",
+                                "text": "The final diagnosis given a patient before release from the hospital after all testing, surgery, and workup are complete",
+                                "type": "reference"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Whether this hospitalization is a readmission. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "boolean"
+                            }
+                        ],
+                        "linkId": "Encounter.hospitalization.reAdmission",
+                        "question": [
+                            {
+                                "linkId": "Encounter.hospitalization.reAdmission.value",
+                                "text": "Is this hospitalization a readmission?",
+                                "type": "boolean"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "List of locations at which the patient has been."
+                    }
+                ],
+                "linkId": "Encounter.location",
+                "title": "List of locations the patient has been at",
+                "repeats": true,
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "The location where the encounter takes place. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "ResourceReference"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                "valueString": "/Location?subject=$subj&patient=$subj&encounter=$encounter"
+                            }
+                        ],
+                        "linkId": "Encounter.location.location",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "Encounter.location.location.value",
+                                "text": "Location the encounter takes place",
+                                "type": "reference"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Time period during which the patient was present at the location. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "Period"
+                            }
+                        ],
+                        "linkId": "Encounter.location.period",
+                        "text": "Time period during which the patient was present at the location",
+                        "question": [
+                            {
+                                "linkId": "Encounter.location.period.low",
+                                "text": "start:",
+                                "type": "dateTime"
+                            },
+                            {
+                                "linkId": "Encounter.location.period.end",
+                                "text": "end:",
+                                "type": "dateTime"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Department or team providing care. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "Encounter.serviceProvider",
+                "question": [
+                    {
+                        "linkId": "Encounter.serviceProvider.value",
+                        "text": "Department or team providing care",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Another Encounter of which this encounter is a part of (administratively or in time). null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Encounter?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "Encounter.partOf",
+                "question": [
+                    {
+                        "linkId": "Encounter.partOf.value",
+                        "text": "Another Encounter this encounter is part of",
+                        "type": "reference"
+                    }
+                ]
+            }
+        ]
+    }
+}

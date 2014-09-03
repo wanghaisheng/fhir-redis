@@ -1,0 +1,333 @@
+{
+    "resourceType": "Questionnaire",
+    "text": {
+        "status": "generated",
+        "div": "<div><p><b>Generated Narrative with Details</b></p><p><b>status</b>: draft</p><p><b>date</b>: 2-Sep 2014 5:51</p><p><b>publisher</b>: HL7 FHIR Standard</p><blockquote><p><b>group</b></p><p><b>linkId</b>: AllergyIntolerance</p><p><b>title</b>: Drug, food, environmental and others</p><p><b>required</b>: true</p><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote><blockquote><p><b>group</b></p></blockquote></blockquote></div>"
+    },
+    "contained": [
+        {
+            "resourceType": "ValueSet",
+            "id": "vs1",
+            "name": "Type options for AllergyIntolerance.recorder",
+            "description": "Type options for AllergyIntolerance.recorder",
+            "status": "active",
+            "define": {
+                "system": "urn:uuid:f1b4f4aa-3b50-4c85-8db7-43f6533104a2",
+                "concept": [
+                    {
+                        "code": "Practitioner",
+                        "display": "Practitioner"
+                    },
+                    {
+                        "code": "Patient",
+                        "display": "Patient"
+                    }
+                ]
+            }
+        }
+    ],
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "Indicates the patient has a susceptibility to an adverse reaction upon exposure to a specified substance."
+            }
+        ],
+        "linkId": "AllergyIntolerance",
+        "title": "Drug, food, environmental and others",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "This records identifiers associated with this allergy/intolerance concern that are defined by business processed and/ or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation). null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Identifier"
+                    }
+                ],
+                "linkId": "AllergyIntolerance.identifier",
+                "text": "External Ids for this item",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "AllergyIntolerance.identifier.label",
+                        "text": "label:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "AllergyIntolerance.identifier.system",
+                        "text": "system:",
+                        "type": "string"
+                    },
+                    {
+                        "linkId": "AllergyIntolerance.identifier.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Criticality of the sensitivity. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "code"
+                    }
+                ],
+                "linkId": "AllergyIntolerance.criticality",
+                "text": "fatal | high | medium | low",
+                "question": [
+                    {
+                        "linkId": "AllergyIntolerance.criticality.value",
+                        "text": "Criticality",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/criticality"
+                        }
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Type of the sensitivity. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "code"
+                    }
+                ],
+                "linkId": "AllergyIntolerance.sensitivityType",
+                "text": "allergy | intolerance | unknown",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "AllergyIntolerance.sensitivityType.value",
+                        "text": "Sensitivity Type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/sensitivitytype"
+                        }
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Date when the sensitivity was recorded. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "datetime"
+                    }
+                ],
+                "linkId": "AllergyIntolerance.recordedDate",
+                "question": [
+                    {
+                        "linkId": "AllergyIntolerance.recordedDate.value",
+                        "text": "When recorded",
+                        "type": "dateTime"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Status of the sensitivity. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "code"
+                    }
+                ],
+                "linkId": "AllergyIntolerance.status",
+                "text": "suspected | confirmed | refuted | resolved",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "AllergyIntolerance.status.value",
+                        "text": "Status",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/sensitivitystatus"
+                        }
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The patient who has the allergy or intolerance. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "AllergyIntolerance.subject",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "AllergyIntolerance.subject.value",
+                        "text": "Who the sensitivity is for",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Indicates who has responsibility for the record. null"
+                    }
+                ],
+                "linkId": "AllergyIntolerance.recorder",
+                "text": "Who recorded the sensitivity",
+                "question": [
+                    {
+                        "linkId": "AllergyIntolerance.recorder._type",
+                        "text": "type",
+                        "type": "choice",
+                        "options": {
+                            "reference": "#vs1"
+                        },
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "AllergyIntolerance.recorder._Practitioner",
+                                "question": [
+                                    {
+                                        "linkId": "AllergyIntolerance.recorder._Practitioner.value",
+                                        "text": "Practitioner",
+                                        "type": "reference"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "ResourceReference"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                                    }
+                                ],
+                                "linkId": "AllergyIntolerance.recorder._Patient",
+                                "question": [
+                                    {
+                                        "linkId": "AllergyIntolerance.recorder._Patient.value",
+                                        "text": "Patient",
+                                        "type": "reference"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The substance that causes the sensitivity. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Substance?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "AllergyIntolerance.substance",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "AllergyIntolerance.substance.value",
+                        "text": "The substance that causes the sensitivity",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Reactions associated with the sensitivity. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/AdverseReaction?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "AllergyIntolerance.reaction",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "AllergyIntolerance.reaction.value",
+                        "text": "Reactions associated with the sensitivity",
+                        "type": "reference"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Observations that confirm or refute the sensitivity. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "ResourceReference"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#reference",
+                        "valueString": "/Observation?subject=$subj&patient=$subj&encounter=$encounter"
+                    }
+                ],
+                "linkId": "AllergyIntolerance.sensitivityTest",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "AllergyIntolerance.sensitivityTest.value",
+                        "text": "Observations that confirm or refute",
+                        "type": "reference"
+                    }
+                ]
+            }
+        ]
+    }
+}

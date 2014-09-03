@@ -1,0 +1,76 @@
+{
+    "resourceType": "OperationDefinition",
+    "text": {
+        "status": "generated",
+        "div": "<div><h2>Value Set Expansion</h2><p>Operation: expand</p><div><p>The definition of a value set is used to create a simple collection of codes suitable for use for data entry or validation.</p>\n<p>If the operation is not called at the instance level, one of the in parameters identifier or valueset must be provided.</p>\n<p>An expanded value set will be returned, or an OperationOutcome with an error message</p>\n</div><p>URL: [base]/ValueSet/$expand</p><p>URL: [base]/ValueSet/[id]/$expand</p><p>Parameters</p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Use</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Documentation</b></td></tr><tr><td>identifier</td><td>in</td><td>0..1</td><td>uri</td><td><div><p>A logical value set identifier (i.e. ValueSet.identifier). The server must know the value set (e.g. it is defined explicitly in the server's valuesets, or it is defined implicitly by some code system known to the server</p>\n</div></td></tr><tr><td>valueSet</td><td>in</td><td>0..1</td><td>ValueSet</td><td><div><p>The value set is provided directly as part of the request. Servers may choose not to accept value sets in this fashion</p>\n</div></td></tr><tr><td>filter</td><td>in</td><td>0..1</td><td>string</td><td><div><p>A text filter that is applied to restrict the codes that are returned (this is useful in a UI context)</p>\n</div></td></tr><tr><td>expansion</td><td>out</td><td>1..1</td><td>ValueSet</td><td><div><p>The result of the expansion</p>\n</div></td></tr></table><div><p>The value set expansion returned by this query should be treated as a transient result that will change over time (whether it does or not depends on how the value set is specified), so applications should repeat the operation each time the value set is used.</p>\n</div></div>"
+    },
+    "title": "Value Set Expansion",
+    "publisher": "HL7 (FHIR Project)",
+    "telecom": [
+        {
+            "system": "url",
+            "value": "http://hl7.org/fhir"
+        },
+        {
+            "system": "email",
+            "value": "fhir@lists.hl7.org"
+        }
+    ],
+    "description": "The definition of a value set is used to create a simple collection of codes suitable for use for data entry or validation. \n\nIf the operation is not called at the instance level, one of the in parameters identifier or valueset must be provided.\n\nAn expanded value set will be returned, or an OperationOutcome with an error message",
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "kind": "operation",
+    "name": "expand",
+    "notes": "The value set expansion returned by this query should be treated as a transient result that will change over time (whether it does or not depends on how the value set is specified), so applications should repeat the operation each time the value set is used.",
+    "system": false,
+    "type": [
+        "ValueSet"
+    ],
+    "instance": true,
+    "parameter": [
+        {
+            "name": "identifier",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "A logical value set identifier (i.e. ValueSet.identifier). The server must know the value set (e.g. it is defined explicitly in the server's valuesets, or it is defined implicitly by some code system known to the server",
+            "type": {
+                "system": "http://hl7.org/fhir/vs/defined-types",
+                "code": "uri"
+            }
+        },
+        {
+            "name": "valueSet",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "The value set is provided directly as part of the request. Servers may choose not to accept value sets in this fashion",
+            "type": {
+                "system": "http://hl7.org/fhir/vs/defined-types",
+                "code": "ValueSet"
+            }
+        },
+        {
+            "name": "filter",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "A text filter that is applied to restrict the codes that are returned (this is useful in a UI context)",
+            "type": {
+                "system": "http://hl7.org/fhir/vs/defined-types",
+                "code": "string"
+            }
+        },
+        {
+            "name": "expansion",
+            "use": "out",
+            "min": 1,
+            "max": "1",
+            "documentation": "The result of the expansion",
+            "type": {
+                "system": "http://hl7.org/fhir/vs/defined-types",
+                "code": "ValueSet"
+            }
+        }
+    ]
+}

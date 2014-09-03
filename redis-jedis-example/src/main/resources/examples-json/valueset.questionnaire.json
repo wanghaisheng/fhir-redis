@@ -1,0 +1,849 @@
+{
+    "resourceType": "Questionnaire",
+    "status": "draft",
+    "date": "2014-09-02T05:51:24.789-00:00",
+    "publisher": "HL7 FHIR Standard",
+    "group": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                "valueString": "A value set specifies a set of codes drawn from one or more code systems."
+            }
+        ],
+        "linkId": "ValueSet",
+        "title": "A set of codes drawn from one or more code systems",
+        "required": true,
+        "group": [
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The identifier that is used to identify this value set when it is referenced in a specification, model, design or an instance (should be globally unique OID, UUID, or URI). null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "ValueSet.identifier",
+                "question": [
+                    {
+                        "linkId": "ValueSet.identifier.value",
+                        "text": "Logical id to reference this value set",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The identifier that is used to identify this version of the value set when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the profile author manually and the value should be a timestamp."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "ValueSet.version",
+                "question": [
+                    {
+                        "linkId": "ValueSet.version.value",
+                        "text": "Logical id for this version of the value set",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A free text natural language name describing the value set."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "ValueSet.name",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "ValueSet.name.value",
+                        "text": "Informal name for this value set",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "This should describe \"the semantic space\" to be included in the value set. This can also describe the approach taken to build the value set."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "ValueSet.purpose",
+                "question": [
+                    {
+                        "linkId": "ValueSet.purpose.value",
+                        "text": "Textual description of the intended scope and use",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "If this is set to 'true', then no new versions of the content logical definition can be created.  Note: Other metadata might still change."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "boolean"
+                    }
+                ],
+                "linkId": "ValueSet.immutable",
+                "question": [
+                    {
+                        "linkId": "ValueSet.immutable.value",
+                        "text": "Indicates whether or not any change to the content logical definition may occur",
+                        "type": "boolean"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The name of the individual or organization that published the value set."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "ValueSet.publisher",
+                "question": [
+                    {
+                        "linkId": "ValueSet.publisher.value",
+                        "text": "Name of the publisher (Organization or individual)",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Contacts of the publisher to assist a user in finding and communicating with the publisher."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "Contact"
+                    }
+                ],
+                "linkId": "ValueSet.telecom",
+                "text": "Contact information of the publisher",
+                "repeats": true,
+                "question": [
+                    {
+                        "linkId": "ValueSet.telecom.type",
+                        "text": "type:",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/contact-system"
+                        }
+                    },
+                    {
+                        "linkId": "ValueSet.telecom.value",
+                        "text": "value:",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A free text natural language description of the use of the value set - reason for definition, conditions of use, etc. The description may include a list of."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "ValueSet.description",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "ValueSet.description.value",
+                        "text": "Human language description of the value set",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "A copyright statement relating to the value set and/or its contents. These are generally legal restrictions on the use and publishing of the value set."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "string"
+                    }
+                ],
+                "linkId": "ValueSet.copyright",
+                "question": [
+                    {
+                        "linkId": "ValueSet.copyright.value",
+                        "text": "Publishing restrictions for the value set",
+                        "type": "string"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The status of the value set."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "code"
+                    }
+                ],
+                "linkId": "ValueSet.status",
+                "text": "draft | active | retired",
+                "required": true,
+                "question": [
+                    {
+                        "linkId": "ValueSet.status.value",
+                        "text": "Status",
+                        "type": "choice",
+                        "options": {
+                            "reference": "http://hl7.org/fhir/vs/valueset-status"
+                        }
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "This valueset was authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "boolean"
+                    }
+                ],
+                "linkId": "ValueSet.experimental",
+                "question": [
+                    {
+                        "linkId": "ValueSet.experimental.value",
+                        "text": "If for testing purposes, not real usage",
+                        "type": "boolean"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "Whether this is intended to be used with an extensible binding or not. null"
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "boolean"
+                    }
+                ],
+                "linkId": "ValueSet.extensible",
+                "question": [
+                    {
+                        "linkId": "ValueSet.extensible.value",
+                        "text": "Whether this is intended to be used with an extensible binding",
+                        "type": "boolean"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "The date that the value set status was last changed."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "datetime"
+                    }
+                ],
+                "linkId": "ValueSet.date",
+                "question": [
+                    {
+                        "linkId": "ValueSet.date.value",
+                        "text": "Date for given status",
+                        "type": "dateTime"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "If a Stability Date is expanded by evaluating the Content Logical Definition using the current version of all referenced code system(s) and value sets as of the Stability Date."
+                    },
+                    {
+                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                        "valueString": "datetime"
+                    }
+                ],
+                "linkId": "ValueSet.stableDate",
+                "question": [
+                    {
+                        "linkId": "ValueSet.stableDate.value",
+                        "text": "Fixed date for the version of all referenced code systems and value sets",
+                        "type": "dateTime"
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "When value set defines its own codes."
+                    }
+                ],
+                "linkId": "ValueSet.define",
+                "title": "When value set defines its own codes",
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "URI to identify the code system. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "uri"
+                            }
+                        ],
+                        "linkId": "ValueSet.define.system",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "ValueSet.define.system.value",
+                                "text": "URI to identify the code system",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "The version of this code system that defines the codes. Note that the version is optional because a well maintained code system does not suffer from versioning, and therefore the version does not need to be maintained. However many code systems are not well maintained, and the version needs to be defined and tracked. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "string"
+                            }
+                        ],
+                        "linkId": "ValueSet.define.version",
+                        "question": [
+                            {
+                                "linkId": "ValueSet.define.version.value",
+                                "text": "Version of this system",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "If code comparison is case sensitive when codes within this system are compared to each other."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "boolean"
+                            }
+                        ],
+                        "linkId": "ValueSet.define.caseSensitive",
+                        "question": [
+                            {
+                                "linkId": "ValueSet.define.caseSensitive.value",
+                                "text": "If code comparison is case sensitive",
+                                "type": "boolean"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Concepts in the code system."
+                            }
+                        ],
+                        "linkId": "ValueSet.define.concept",
+                        "title": "Concepts in the code system",
+                        "repeats": true,
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Code that identifies concept. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "code"
+                                    }
+                                ],
+                                "linkId": "ValueSet.define.concept.code",
+                                "text": "Code that identifies concept",
+                                "required": true,
+                                "question": [
+                                    {
+                                        "linkId": "ValueSet.define.concept.code.value",
+                                        "text": "Code that identifies concept",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "If this code is not for use as a real concept. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "boolean"
+                                    }
+                                ],
+                                "linkId": "ValueSet.define.concept.abstract",
+                                "question": [
+                                    {
+                                        "linkId": "ValueSet.define.concept.abstract.value",
+                                        "text": "If this code is not for use as a real concept",
+                                        "type": "boolean"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Text to Display to the user. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "string"
+                                    }
+                                ],
+                                "linkId": "ValueSet.define.concept.display",
+                                "question": [
+                                    {
+                                        "linkId": "ValueSet.define.concept.display.value",
+                                        "text": "Text to Display to the user",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "The formal definition of the concept. Formal definitions are not required, because of the prevalence of legacy systems without them, but they are highly recommended, as without them there is no formal meaning associated with the concept. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "string"
+                                    }
+                                ],
+                                "linkId": "ValueSet.define.concept.definition",
+                                "question": [
+                                    {
+                                        "linkId": "ValueSet.define.concept.definition.value",
+                                        "text": "Formal Definition",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Child Concepts (is-a / contains)."
+                                    }
+                                ],
+                                "linkId": "ValueSet.define.concept.concept",
+                                "title": "Child Concepts (is-a / contains)",
+                                "repeats": true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "When value set includes codes from elsewhere."
+                    }
+                ],
+                "linkId": "ValueSet.compose",
+                "title": "When value set includes codes from elsewhere",
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Includes the contents of the referenced value set as a part of the contents of this value set."
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "uri"
+                            }
+                        ],
+                        "linkId": "ValueSet.compose.import",
+                        "repeats": true,
+                        "question": [
+                            {
+                                "linkId": "ValueSet.compose.import.value",
+                                "text": "Import the contents of another value set",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Include one or more codes from a code system."
+                            }
+                        ],
+                        "linkId": "ValueSet.compose.include",
+                        "title": "Include one or more codes from a code system",
+                        "text": "If there are no codes or filters, the entire code system is included.",
+                        "repeats": true,
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "The code system from which the selected codes come from."
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "uri"
+                                    }
+                                ],
+                                "linkId": "ValueSet.compose.include.system",
+                                "required": true,
+                                "question": [
+                                    {
+                                        "linkId": "ValueSet.compose.include.system.value",
+                                        "text": "The system the codes come from",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "The version of the code system that the codes are selected from."
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "string"
+                                    }
+                                ],
+                                "linkId": "ValueSet.compose.include.version",
+                                "question": [
+                                    {
+                                        "linkId": "ValueSet.compose.include.version.value",
+                                        "text": "Specific version of the code system referred to",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Specifies a code or concept to be included or excluded. The list of codes is considered ordered, though the order may not have any particular significance."
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "code"
+                                    }
+                                ],
+                                "linkId": "ValueSet.compose.include.code",
+                                "text": "Code or concept from system",
+                                "repeats": true,
+                                "question": [
+                                    {
+                                        "linkId": "ValueSet.compose.include.code.value",
+                                        "text": "Code or concept from system",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Select concepts by specify a matching criteria based on the properties (including relationships) defined by the system. If multiple filters are specified, they SHALL all be true."
+                                    }
+                                ],
+                                "linkId": "ValueSet.compose.include.filter",
+                                "title": "Select codes/concepts by their properties (including relationships)",
+                                "text": "Selecting codes by specifying filters based on properties is only possible where the underlying code system defines appropriate properties. Note that in some cases, the underlying code system defines the logical concepts but not the literal codes for the concepts. In such cases, the literal definitions may be provided by a third party.",
+                                "repeats": true,
+                                "group": [
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                                "valueString": "A code that identifies a property defined in the code system. null"
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "code"
+                                            }
+                                        ],
+                                        "linkId": "ValueSet.compose.include.filter.property",
+                                        "text": "A property defined by the code system",
+                                        "required": true,
+                                        "question": [
+                                            {
+                                                "linkId": "ValueSet.compose.include.filter.property.value",
+                                                "text": "A property defined by the code system",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                                "valueString": "The kind of operation to perform as a part of the filter criteria. null"
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "code"
+                                            }
+                                        ],
+                                        "linkId": "ValueSet.compose.include.filter.op",
+                                        "text": "= | is-a | is-not-a | regex | in | not in",
+                                        "required": true,
+                                        "question": [
+                                            {
+                                                "linkId": "ValueSet.compose.include.filter.op.value",
+                                                "text": "Op",
+                                                "type": "choice",
+                                                "options": {
+                                                    "reference": "http://hl7.org/fhir/vs/filter-operator"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "extension": [
+                                            {
+                                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                                "valueString": "The match value may be either a code defined by the system, or a string value which is used a regex match on the literal string of the property value."
+                                            },
+                                            {
+                                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                                "valueString": "code"
+                                            }
+                                        ],
+                                        "linkId": "ValueSet.compose.include.filter.value",
+                                        "text": "Code from the system, or regex criteria",
+                                        "required": true,
+                                        "question": [
+                                            {
+                                                "linkId": "ValueSet.compose.include.filter.value.value",
+                                                "text": "Code from the system, or regex criteria",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Exclude one or more codes from the value set."
+                            }
+                        ],
+                        "linkId": "ValueSet.compose.exclude",
+                        "title": "Explicitly exclude codes",
+                        "text": "Usually this is used to selectively exclude codes that were included by subsumption in the inclusions.",
+                        "repeats": true
+                    }
+                ]
+            },
+            {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                        "valueString": "When value set is an expansion."
+                    }
+                ],
+                "linkId": "ValueSet.expansion",
+                "title": "When value set is an expansion",
+                "group": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "An identifier that uniquely identifies this expansion of the valueset. Systems may re-use the same identifier as long as the expansion and the definition remain the same, but are not required to do so. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "Identifier"
+                            }
+                        ],
+                        "linkId": "ValueSet.expansion.identifier",
+                        "text": "Uniquely identifies this expansion",
+                        "question": [
+                            {
+                                "linkId": "ValueSet.expansion.identifier.label",
+                                "text": "label:",
+                                "type": "string"
+                            },
+                            {
+                                "linkId": "ValueSet.expansion.identifier.system",
+                                "text": "system:",
+                                "type": "string"
+                            },
+                            {
+                                "linkId": "ValueSet.expansion.identifier.value",
+                                "text": "value:",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Time valueset expansion happened. null"
+                            },
+                            {
+                                "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                "valueString": "instant"
+                            }
+                        ],
+                        "linkId": "ValueSet.expansion.timestamp",
+                        "required": true,
+                        "question": [
+                            {
+                                "linkId": "ValueSet.expansion.timestamp.value",
+                                "text": "Time valueset expansion happened",
+                                "type": "instant"
+                            }
+                        ]
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                "valueString": "Codes in the value set."
+                            }
+                        ],
+                        "linkId": "ValueSet.expansion.contains",
+                        "title": "Codes in the value set",
+                        "repeats": true,
+                        "group": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "System value for the code. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "uri"
+                                    }
+                                ],
+                                "linkId": "ValueSet.expansion.contains.system",
+                                "question": [
+                                    {
+                                        "linkId": "ValueSet.expansion.contains.system.value",
+                                        "text": "System value for the code",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Code - if blank, this is not a choosable code. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "code"
+                                    }
+                                ],
+                                "linkId": "ValueSet.expansion.contains.code",
+                                "text": "Code - if blank, this is not a choosable code",
+                                "question": [
+                                    {
+                                        "linkId": "ValueSet.expansion.contains.code.value",
+                                        "text": "Code - if blank, this is not a choosable code",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "User display for the concept. null"
+                                    },
+                                    {
+                                        "url": "http://www.healthintersections.com.au/fhir/Profile/metadata#type",
+                                        "valueString": "string"
+                                    }
+                                ],
+                                "linkId": "ValueSet.expansion.contains.display",
+                                "question": [
+                                    {
+                                        "linkId": "ValueSet.expansion.contains.display.value",
+                                        "text": "User display for the concept",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover",
+                                        "valueString": "Codes contained in this concept."
+                                    }
+                                ],
+                                "linkId": "ValueSet.expansion.contains.contains",
+                                "title": "Codes contained in this concept",
+                                "repeats": true
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
