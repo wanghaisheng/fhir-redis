@@ -15,7 +15,7 @@ public class FhirResourceJSONUtil {
 
 
     /**
-     * ½«·Ç¼¯ºÏÀàjava¶ÔÏó×ª»»³ÉÎªjson object
+     * å°†éé›†åˆç±»javaå¯¹è±¡è½¬æ¢æˆä¸ºjson object
      *
      * @param o
      * @return
@@ -52,7 +52,7 @@ public class FhirResourceJSONUtil {
     }
 
     /**
-     * ×ª»»ÎªObject
+     * è½¬æ¢ä¸ºObject
      *
      * @param str
      * @return
@@ -62,7 +62,7 @@ public class FhirResourceJSONUtil {
     }
 
     /**
-     * ĞòÁĞ»¯object£¬´øÓĞobjµÄÀàĞÍĞÅÏ¢
+     * åºåˆ—åŒ–objectï¼Œå¸¦æœ‰objçš„ç±»å‹ä¿¡æ¯
      *
      * @param obj
      * @return
@@ -73,7 +73,7 @@ public class FhirResourceJSONUtil {
     }
 
     /**
-     * ½«object×ª»»ÎªjsonÊı¾İ
+     * å°†objectè½¬æ¢ä¸ºjsonæ•°æ®
      *
      * @param obj
      * @return

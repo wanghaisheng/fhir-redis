@@ -6,12 +6,12 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-
+import java.util.TimeZone;
 /**
- * °æÈ¨£ºÈÚ¹á×ÊÑ¶ <br/>
- * ×÷Õß£ºkai.gao@rogrand.com <br/>
- * Éú³ÉÈÕÆÚ£º2013-10-24 <br/>
- * ÃèÊö£ºÈÕÆÚÊ±¼ä°ïÖúÀà£¬Ìá¹©ÈÕÆÚÊ±¼ä³£ÓÃ·½·¨·â×°
+ * ç‰ˆæƒï¼šèè´¯èµ„è®¯ <br/>
+ * ä½œè€…ï¼škai.gao@rogrand.com <br/>
+ * ç”Ÿæˆæ—¥æœŸï¼š2013-10-24 <br/>
+ * æè¿°ï¼šæ—¥æœŸæ—¶é—´å¸®åŠ©ç±»ï¼Œæä¾›æ—¥æœŸæ—¶é—´å¸¸ç”¨æ–¹æ³•å°è£…
  */
 public class DateUtil {
 
@@ -28,6 +28,17 @@ public class DateUtil {
 
     public static String getNow() {
         return sdFormat3.format(new Date());
+    }
+
+    public  static String getNowWithZone(){
+
+        TimeZone time = TimeZone.getTimeZone("GMT+8"); //è®¾ç½®ä¸ºä¸œå…«åŒº
+        time = TimeZone.getDefault();// è¿™ä¸ªæ˜¯å›½é™…åŒ–æ‰€ç”¨çš„
+        System.out.println(time);
+        TimeZone.setDefault(time);// è®¾ç½®æ—¶åŒº
+        Calendar calendar = Calendar.getInstance();// è·å–å®ä¾‹
+        Date date = calendar.getTime(); //è·å–Dateå¯¹è±¡
+        return sdFormat3.format(date);//å¯¹è±¡è¿›è¡Œæ ¼å¼åŒ–ï¼Œè·å–å­—ç¬¦ä¸²æ ¼å¼çš„è¾“å‡º
     }
 
     public static String getDate(Date date) {
@@ -62,10 +73,10 @@ public class DateUtil {
     }
 
     /**
-     * »ñÈ¡µ±Ç°ÈÕÆÚÊÇĞÇÆÚ¼¸<br>
+     * è·å–å½“å‰æ—¥æœŸæ˜¯æ˜ŸæœŸå‡ <br>
      *
      * @param dt
-     * @return µ±Ç°ÈÕÆÚÊÇĞÇÆÚ¼¸
+     * @return å½“å‰æ—¥æœŸæ˜¯æ˜ŸæœŸå‡ 
      */
     public static int getWeekOfDate(Date dt) {
         Calendar cal = Calendar.getInstance();
@@ -79,7 +90,7 @@ public class DateUtil {
     }
 
     /**
-     * »ñµÃ µ±Ç° »òÕß²ÎÊıÊ±¼äÊÇ½ñÄêµÄµÚ¼¸ÖÜ
+     * è·å¾— å½“å‰ æˆ–è€…å‚æ•°æ—¶é—´æ˜¯ä»Šå¹´çš„ç¬¬å‡ å‘¨
      *
      * @param dt
      * @return
@@ -91,7 +102,7 @@ public class DateUtil {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
         long time = 0;
         try {
-            // ½ñÄê 1ÔÂ1ºÅ 0µã
+            // ä»Šå¹´ 1æœˆ1å· 0ç‚¹
             time = sdf.parse(sdf.format(dt)).getTime();
         } catch (ParseException e) {
             e.printStackTrace();
@@ -99,11 +110,11 @@ public class DateUtil {
         if (time == 0) {
             return -1;
         }
-        // ´Ó½ñÄê1ÔÂ1ºÅµ½ÏÖÔÚ¹ıÈ¥µÄÊ±¼ä
+        // ä»ä»Šå¹´1æœˆ1å·åˆ°ç°åœ¨è¿‡å»çš„æ—¶é—´
         long lapsed = System.currentTimeMillis() - time
                 + getWeekOfDate(new Date(time)) * 86400000;
 
-        // Õâ¸öĞÇÆÚÒÑ¾­¹ıÈ¥µÄÊ±¼ä
+        // è¿™ä¸ªæ˜ŸæœŸå·²ç»è¿‡å»çš„æ—¶é—´
         long remainder = lapsed % (86400000 * 7);
 
         return (int) ((lapsed - remainder) / (86400000 * 7) + (remainder == 0 ? 0
@@ -111,18 +122,18 @@ public class DateUtil {
     }
 
     /**
-     * »ñµÃ °ñµ¥Åú´ÎºÅ
+     * è·å¾— æ¦œå•æ‰¹æ¬¡å·
      *
-     * @param time Èç¹ûtimeÎª¿Õ Ôò·µ»Øµ±ÆÚÅú´ÎºÅ Èç¹ûÊÇ½ñÄêµÚÒ»ÖÜ Ôò¼ì²éÈ¥ÄêµÄ×îºóÒ»ÖÜ
+     * @param time å¦‚æœtimeä¸ºç©º åˆ™è¿”å›å½“æœŸæ‰¹æ¬¡å· å¦‚æœæ˜¯ä»Šå¹´ç¬¬ä¸€å‘¨ åˆ™æ£€æŸ¥å»å¹´çš„æœ€åä¸€å‘¨
      * @return
      */
     public static int getBatchid(long time) {
-        // ±¾ÖÜÊÇ½ñÄêµÄµÚ¼¸ÖÜ
+        // æœ¬å‘¨æ˜¯ä»Šå¹´çš„ç¬¬å‡ å‘¨
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
         int index = DateUtil.getWeekIndex(time == 0 ? null : new Date(time));
         int year = Integer.valueOf(sdf.format(time == 0 ? new Date()
                 : new Date(time)));
-        // Èç¹ûÊÇµÚÒ»ÖÜ Ôò¼ì²éÈ¥ÄêµÄ×îºóÒ»ÖÜ
+        // å¦‚æœæ˜¯ç¬¬ä¸€å‘¨ åˆ™æ£€æŸ¥å»å¹´çš„æœ€åä¸€å‘¨
         if (index == 1) {
             index = DateUtil.getWeekIndex(time == 0 ? null : new Date(time
                     - (8640000 * 7)));
@@ -132,15 +143,15 @@ public class DateUtil {
     }
 
     /**
-     * ×÷Õß: yong.chen@rogrand.com <br/>
+     * ä½œè€…: yong.chen@rogrand.com <br/>
      * <p/>
-     * Éú³ÉÈÕÆÚ £º2013Äê11ÔÂ5ÈÕ
+     * ç”Ÿæˆæ—¥æœŸ ï¼š2013å¹´11æœˆ5æ—¥
      * <p/>
      * Date
      *
-     * @param date    ¿ªÊ¼Ê±¼ä
-     * @param addTime Ôö¼ÓÊ±¼äÊıÁ¿
-     * @param unit    Ê±¼äµ¥Î» Ê± ·Ö Ãë ÈÕ ÔÂ Äê µÈ
+     * @param date    å¼€å§‹æ—¶é—´
+     * @param addTime å¢åŠ æ—¶é—´æ•°é‡
+     * @param unit    æ—¶é—´å•ä½ æ—¶ åˆ† ç§’ æ—¥ æœˆ å¹´ ç­‰
      * @return
      */
 
@@ -152,7 +163,7 @@ public class DateUtil {
     }
 
     /**
-     * µÃµ½µ±Ç°ÈÕÆÚ×Ö·û´® ¸ñÊ½£¨yyyy-MM-dd£© pattern¿ÉÒÔÎª£º"yyyy-MM-dd" "HH:mm:ss" "E"
+     * å¾—åˆ°å½“å‰æ—¥æœŸå­—ç¬¦ä¸² æ ¼å¼ï¼ˆyyyy-MM-ddï¼‰ patternå¯ä»¥ä¸ºï¼š"yyyy-MM-dd" "HH:mm:ss" "E"
      */
     public static String getDate(String pattern) {
         return DateFormatUtils.format(new Date(), pattern);

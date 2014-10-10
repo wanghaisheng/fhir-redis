@@ -6,34 +6,34 @@ import redis.clients.jedis.JedisPoolConfig;
 
 public final class RedisUtil {
 
-    //Redis·şÎñÆ÷IP
+    //RedisæœåŠ¡å™¨IP
     private static String ADDR = "localhost";
 
-    //RedisµÄ¶Ë¿ÚºÅ
+    //Redisçš„ç«¯å£å·
     private static int PORT = 6379;
 
-    //·ÃÎÊÃÜÂë
+    //è®¿é—®å¯†ç 
     private static String AUTH = "admin";
 
-    //¿ÉÓÃÁ¬½ÓÊµÀıµÄ×î´óÊıÄ¿£¬Ä¬ÈÏÖµÎª8£»
-    //Èç¹û¸³ÖµÎª-1£¬Ôò±íÊ¾²»ÏŞÖÆ£»Èç¹ûpoolÒÑ¾­·ÖÅäÁËmaxActive¸öjedisÊµÀı£¬Ôò´ËÊ±poolµÄ×´Ì¬Îªexhausted(ºÄ¾¡)¡£
+    //å¯ç”¨è¿æ¥å®ä¾‹çš„æœ€å¤§æ•°ç›®ï¼Œé»˜è®¤å€¼ä¸º8ï¼›
+    //å¦‚æœèµ‹å€¼ä¸º-1ï¼Œåˆ™è¡¨ç¤ºä¸é™åˆ¶ï¼›å¦‚æœpoolå·²ç»åˆ†é…äº†maxActiveä¸ªjediså®ä¾‹ï¼Œåˆ™æ­¤æ—¶poolçš„çŠ¶æ€ä¸ºexhausted(è€—å°½)ã€‚
     private static int MAX_ACTIVE = 1024;
 
-    //¿ØÖÆÒ»¸öpool×î¶àÓĞ¶àÉÙ¸ö×´Ì¬Îªidle(¿ÕÏĞµÄ)µÄjedisÊµÀı£¬Ä¬ÈÏÖµÒ²ÊÇ8¡£
+    //æ§åˆ¶ä¸€ä¸ªpoolæœ€å¤šæœ‰å¤šå°‘ä¸ªçŠ¶æ€ä¸ºidle(ç©ºé—²çš„)çš„jediså®ä¾‹ï¼Œé»˜è®¤å€¼ä¹Ÿæ˜¯8ã€‚
     private static int MAX_IDLE = 200;
 
-    //µÈ´ı¿ÉÓÃÁ¬½ÓµÄ×î´óÊ±¼ä£¬µ¥Î»ºÁÃë£¬Ä¬ÈÏÖµÎª-1£¬±íÊ¾ÓÀ²»³¬Ê±¡£Èç¹û³¬¹ıµÈ´ıÊ±¼ä£¬ÔòÖ±½ÓÅ×³öJedisConnectionException£»
+    //ç­‰å¾…å¯ç”¨è¿æ¥çš„æœ€å¤§æ—¶é—´ï¼Œå•ä½æ¯«ç§’ï¼Œé»˜è®¤å€¼ä¸º-1ï¼Œè¡¨ç¤ºæ°¸ä¸è¶…æ—¶ã€‚å¦‚æœè¶…è¿‡ç­‰å¾…æ—¶é—´ï¼Œåˆ™ç›´æ¥æŠ›å‡ºJedisConnectionExceptionï¼›
     private static int MAX_WAIT = 10000;
 
     private static int TIMEOUT = 10000;
 
-    //ÔÚborrowÒ»¸öjedisÊµÀıÊ±£¬ÊÇ·ñÌáÇ°½øĞĞvalidate²Ù×÷£»Èç¹ûÎªtrue£¬ÔòµÃµ½µÄjedisÊµÀı¾ùÊÇ¿ÉÓÃµÄ£»
+    //åœ¨borrowä¸€ä¸ªjediså®ä¾‹æ—¶ï¼Œæ˜¯å¦æå‰è¿›è¡Œvalidateæ“ä½œï¼›å¦‚æœä¸ºtrueï¼Œåˆ™å¾—åˆ°çš„jediså®ä¾‹å‡æ˜¯å¯ç”¨çš„ï¼›
     private static boolean TEST_ON_BORROW = true;
 
     private static JedisPool jedisPool = null;
 
     /**
-     * ³õÊ¼»¯RedisÁ¬½Ó³Ø
+     * åˆå§‹åŒ–Redisè¿æ¥æ± 
      */
     static {
         try {
@@ -41,14 +41,16 @@ public final class RedisUtil {
             config.setMaxIdle(MAX_IDLE);
             config.setMaxWaitMillis(MAX_WAIT);
             config.setTestOnBorrow(TEST_ON_BORROW);
-            jedisPool = new JedisPool(config, ADDR, PORT, TIMEOUT, AUTH);
+            jedisPool = new JedisPool(config, ADDR, PORT, TIMEOUT);
+
+//            jedisPool = new JedisPool(config, ADDR, PORT, TIMEOUT, AUTH);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     /**
-     * »ñÈ¡JedisÊµÀı
+     * è·å–Jediså®ä¾‹
      *
      * @return
      */
@@ -67,7 +69,7 @@ public final class RedisUtil {
     }
 
     /**
-     * ÊÍ·Åjedis×ÊÔ´
+     * é‡Šæ”¾jedisèµ„æº
      *
      * @param jedis
      */

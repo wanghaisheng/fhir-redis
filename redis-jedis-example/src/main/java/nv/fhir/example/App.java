@@ -1,4 +1,4 @@
-package nv.jedis.example;
+package nv.fhir.example;
 
 import redis.clients.jedis.Jedis;
 
